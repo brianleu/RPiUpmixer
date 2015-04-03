@@ -1,0 +1,754 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- *
+ * This software is distributed in the hope that it will be useful,
+ * but is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ * This software may only be used to program products purchased from
+ * Analog Devices for incorporation by you into audio products that
+ * are intended for resale to audio product end users. This software
+ * may not be distributed whole or in any part to third parties.
+ *
+ * Copyright ©2015 Analog Devices, Inc. All rights reserved.
+ */
+-->
+<!--SigmaStudio export XML file-->
+<Schematic>
+    <IC>
+        <Name>IC 1</Name>
+        <Register>
+            <Name>IC 1.SOFT_RESET</Name>
+            <Address>63632</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x00, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOFT_RESET</Name>
+            <Address>63632</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x01, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.Reset Delay</Name>
+            <Address>0</Address>
+            <Size>2</Size>
+            <Data>0x00, 0xFF, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.HIBERNATE</Name>
+            <Address>62464</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x00, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.HIBERNATE</Name>
+            <Address>62464</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x01, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.Hibernate Delay</Name>
+            <Address>0</Address>
+            <Size>2</Size>
+            <Data>0x00, 0xFF, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.KILL_CORE</Name>
+            <Address>62467</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x00, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.KILL_CORE</Name>
+            <Address>62467</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x01, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.PLL_ENABLE</Name>
+            <Address>61443</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x00, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.PLL_CTRL1 Register</Name>
+            <Address>61441</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.PLL_CLK_SRC Register</Name>
+            <Address>61442</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x01, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.MCLK_OUT Register</Name>
+            <Address>61445</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x05, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.PLL_ENABLE Register</Name>
+            <Address>61443</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x01, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.PLL Lock Delay</Name>
+            <Address>0</Address>
+            <Size>2</Size>
+            <Data>0x00, 0xFF, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.POWER_ENABLE0 Register</Name>
+            <Address>61520</Address>
+            <Size>2</Size>
+            <Data>0x1F, 0xFF, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.POWER_ENABLE1 Register</Name>
+            <Address>61521</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x1F, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE0</Name>
+            <Address>61824</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE1</Name>
+            <Address>61825</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE2</Name>
+            <Address>61826</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE3</Name>
+            <Address>61827</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE4</Name>
+            <Address>61828</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE5</Name>
+            <Address>61829</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE6</Name>
+            <Address>61830</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE7</Name>
+            <Address>61831</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE8</Name>
+            <Address>61832</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE9</Name>
+            <Address>61833</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE10</Name>
+            <Address>61834</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE11</Name>
+            <Address>61835</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE12</Name>
+            <Address>61836</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE13</Name>
+            <Address>61837</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE14</Name>
+            <Address>61838</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE15</Name>
+            <Address>61839</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE16</Name>
+            <Address>61840</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE17</Name>
+            <Address>61841</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE18</Name>
+            <Address>61842</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE19</Name>
+            <Address>61843</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE20</Name>
+            <Address>61844</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE21</Name>
+            <Address>61845</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE22</Name>
+            <Address>61846</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SOUT_SOURCE23</Name>
+            <Address>61847</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SERIAL_BYTE_0_0</Name>
+            <Address>61952</Address>
+            <Size>2</Size>
+            <Data>0x90, 0x00, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SERIAL_BYTE_1_0</Name>
+            <Address>61956</Address>
+            <Size>2</Size>
+            <Data>0x90, 0x00, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SERIAL_BYTE_2_0</Name>
+            <Address>61960</Address>
+            <Size>2</Size>
+            <Data>0x90, 0x00, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SERIAL_BYTE_3_0</Name>
+            <Address>61964</Address>
+            <Size>2</Size>
+            <Data>0x90, 0x00, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SERIAL_BYTE_4_0</Name>
+            <Address>61968</Address>
+            <Size>2</Size>
+            <Data>0x90, 0x00, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SERIAL_BYTE_5_0</Name>
+            <Address>61972</Address>
+            <Size>2</Size>
+            <Data>0x90, 0x00, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SERIAL_BYTE_6_0</Name>
+            <Address>61976</Address>
+            <Size>2</Size>
+            <Data>0x90, 0x00, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.SERIAL_BYTE_7_0</Name>
+            <Address>61980</Address>
+            <Size>2</Size>
+            <Data>0x90, 0x00, </Data>
+        </Register>
+        <Program>
+            <Name>Program Data</Name>
+            <Address>49152</Address>
+            <Size>844</Size>
+            <Data>0x00, 0x00, 0x00, 0x02, 0x0C, 0x00, 0xDC, 0xDC, 0x0D, 0x00, 0xFF, 0xD2, 0x0D, 0x00, 0xFF, 0xD0, 0x0D, 0x00, 0xF4, 0x50, 0x0D, 0x00, 0xF4, 0x00, 0xC0, 0x00, 0x23, 0x80, 0x80, 0x00, 0x00, 0x00, 0xC0, 0x00, 0x23, 0x00, 0x80, 0x00, 0x00, 0x00, 0xC0, 0x00, 0x23, 0xC0, 0x80, 0x00, 0x00, 0x10, 0xC0, 0x00, 0x22, 0x00, 0x80, 0x00, 0x00, 0x00, 0x08, 0x80, 0xDC, 0xE0, 0x0C, 0x00, 0xDC, 0xDC, 0xC0, 0x00, 0x28, 0x30, 0x80, 0x00, 0x04, 0x18, 0xC0, 0x00, 0x30, 0x00, 0x80, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x16, 0x06, 0x40, 0x50, 0x10, 0xC0, 0x00, 0x28, 0x30, 0x80, 0x00, 0x00, 0x1C, 0xC0, 0x00, 0x30, 0x00, 0x80, 0x00, 0x04, 0x18, 0x01, 0x00, 0x00, 0x1C, 0x06, 0x40, 0x50, 0x10, 0xC0, 0x00, 0x20, 0x00, 0x80, 0x00, 0x00, 0x2F, 0x0D, 0x00, 0xFF, 0xC1, 0xC0, 0x00, 0x20, 0x00, 0x80, 0x00, 0x00, 0x01, 0x0D, 0x00, 0xF4, 0x62, 0xC0, 0x00, 0x20, 0x00, 0x80, 0x00, 0x00, 0x00, 0x0D, 0x00, 0xF4, 0x62, 0xC0, 0x00, 0x20, 0x00, 0x80, 0x00, 0x00, 0x02, 0x0D, 0x00, 0xFF, 0xD1, 0x00, 0x00, 0x00, 0x03, 0x0D, 0x00, 0xFF, 0xD2, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x01, 0x00, 0x2A, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x9E, 0xDC, 0xE0, 0x08, 0x9C, 0x00, 0x10, 0x08, 0x98, 0x00, 0x14, 0x00, 0x00, 0x00, 0x00, 0xC0, 0x00, 0x00, 0x00, 0x82, 0x4F, 0x00, 0x18, 0x08, 0x8A, 0xDC, 0xE0, 0x0A, 0x21, 0x00, 0x1E, 0x00, 0x8C, 0x20, 0x00, 0x0A, 0xA5, 0x00, 0x1D, 0x02, 0x09, 0x00, 0x47, 0xC0, 0x00, 0x28, 0x70, 0x80, 0x00, 0x60, 0x00, 0x00, 0x8C, 0x11, 0x91, 0x00, 0x00, 0x00, 0x23, 0x00, 0x00, 0x00, 0x00, 0x30, 0x00, 0xBC, 0xE9, 0x00, 0x00, 0xC2, 0xF1, 0x01, 0x00, 0x00, 0x46, 0x06, 0x00, 0x40, 0x14, 0x36, 0x40, 0x50, 0x15, 0x26, 0x40, 0x40, 0x15, 0x09, 0x2A, 0x00, 0x1E, 0x00, 0x00, 0x00, 0x00, 0x0C, 0x00, 0xFC, 0x40, 0x06, 0x40, 0x10, 0x0E, 0x0C, 0x00, 0xFC, 0x41, 0x06, 0x40, 0x10, 0x1E, 0x0C, 0x82, 0x00, 0x40, 0x0A, 0x21, 0xDC, 0xDC, 0x35, 0x0C, 0x10, 0x0E, 0x05, 0x4C, 0x10, 0x2E, 0x35, 0x0C, 0x10, 0x1E, 0x05, 0x4C, 0x10, 0x3E, 0xC0, 0x00, 0x08, 0x0F, 0x8D, 0x80, 0x00, 0x21, 0xC0, 0x00, 0x08, 0x0F, 0x8D, 0x84, 0x00, 0x20, 0xC0, 0x00, 0x08, 0x0F, 0x8D, 0x94, 0x00, 0x1F, 0x06, 0x10, 0x10, 0x2E, 0x0C, 0x01, 0xFD, 0xA0, 0x00, 0x04, 0x00, 0x08, 0x0D, 0x00, 0x00, 0x1F, 0x05, 0x4C, 0x10, 0x4E, 0x05, 0x0C, 0x10, 0x2E, 0x05, 0x2C, 0x10, 0x3E, 0x00, 0x84, 0x00, 0x08, 0x05, 0x4C, 0x10, 0x6E, 0x0C, 0x40, 0x00, 0x41, 0x06, 0x00, 0x10, 0x3E, 0x00, 0x04, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00, 0x05, 0x4C, 0x10, 0x5E, 0x05, 0x0C, 0x10, 0x2E, 0x05, 0x0C, 0x90, 0x3E, 0x00, 0x84, 0x10, 0x01, 0x05, 0x4C, 0x10, 0x7E, 0x06, 0x00, 0x10, 0x4E, 0x0D, 0x00, 0xFC, 0xC0, 0x06, 0x00, 0x10, 0x5E, 0x0D, 0x00, 0xFC, 0xC1, 0x0C, 0x40, 0x00, 0x42, 0x06, 0x00, 0x10, 0x6E, 0x00, 0x04, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00, 0x05, 0x4C, 0x10, 0xAE, 0x0C, 0x40, 0x00, 0x43, 0x06, 0x00, 0x10, 0x7E, 0x00, 0x04, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00, 0x05, 0x4C, 0x10, 0xBE, 0xC0, 0x00, 0x00, 0x00, 0x82, 0x0C, 0x00, 0x00, 0xC0, 0x00, 0x00, 0x00, 0x82, 0x1E, 0x00, 0x08, 0xC0, 0x00, 0x00, 0x00, 0x82, 0x6F, 0x00, 0x22, 0xFD, 0x6A, 0x80, 0x00, 0x80, 0x00, 0x00, 0xC3, 0xF8, 0x74, 0x80, 0x03, 0x81, 0x40, 0x41, 0xC5, 0xFC, 0x6A, 0x80, 0x21, 0x88, 0x00, 0x08, 0xC3, 0xE0, 0x34, 0xA2, 0x07, 0x80, 0x42, 0x09, 0xC5, 0xFD, 0x6A, 0x80, 0x27, 0x8A, 0x80, 0x08, 0xC3, 0xE8, 0xB4, 0xA6, 0x43, 0x81, 0x42, 0x09, 0xC5, 0xFC, 0x6A, 0x80, 0x21, 0x8F, 0x04, 0x08, 0xC3, 0xE9, 0xB4, 0xA2, 0x07, 0x80, 0x42, 0x09, 0xC5, 0x05, 0x5C, 0x50, 0x00, 0x05, 0x4C, 0x10, 0xCE, 0xC0, 0x00, 0x00, 0x00, 0x82, 0x0E, 0x00, 0x14, 0x0A, 0x21, 0x00, 0x44, 0xC0, 0x00, 0x00, 0x00, 0x82, 0x00, 0x04, 0x00, 0x00, 0x84, 0x30, 0x00, 0x00, 0x00, 0xD8, 0x40, 0x06, 0x10, 0x10, 0xBE, 0x06, 0x50, 0x50, 0x00, 0x06, 0x00, 0x18, 0x00, 0x06, 0x40, 0x10, 0xFE, 0x0C, 0x40, 0x00, 0x45, 0x06, 0x00, 0x10, 0xCE, 0x00, 0x04, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00, 0x05, 0x4C, 0x11, 0x0E, 0xC0, 0x00, 0x00, 0x00, 0x82, 0x0C, 0x00, 0x0E, 0xC0, 0x00, 0x00, 0x00, 0x82, 0x1E, 0x00, 0x0D, 0xC0, 0x00, 0x00, 0x00, 0x82, 0x6F, 0x00, 0x31, 0xFD, 0x6A, 0x80, 0x00, 0x80, 0x00, 0x00, 0xC3, 0xF8, 0x74, 0x80, 0x03, 0x81, 0x40, 0x41, 0xC5, 0xFC, 0x6A, 0x80, 0x21, 0x88, 0x00, 0x08, 0xC3, 0xE0, 0x34, 0xA2, 0x07, 0x80, 0x42, 0x09, 0xC5, 0xFD, 0x6A, 0x80, 0x27, 0x8A, 0x80, 0x08, 0xC3, 0xE8, 0xB4, 0xA6, 0x43, 0x81, 0x42, 0x09, 0xC5, 0xFC, 0x6A, 0x80, 0x21, 0x8F, 0x04, 0x08, 0xC3, 0xE9, 0xB4, 0xA2, 0x07, 0x80, 0x42, 0x09, 0xC5, 0x05, 0x5C, 0x50, 0x00, 0x05, 0x4C, 0x11, 0x1E, 0x06, 0x00, 0x11, 0x0E, 0x0D, 0x00, 0xFC, 0xC2, 0x0C, 0x40, 0x00, 0x46, 0x06, 0x00, 0x11, 0x1E, 0x00, 0x04, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00, 0x05, 0x4C, 0x11, 0x2E, 0x0C, 0x40, 0x00, 0x47, 0x06, 0x00, 0x11, 0x1E, 0x00, 0x04, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00, 0x05, 0x4C, 0x11, 0x3E, 0x06, 0x00, 0x11, 0x2E, 0x0D, 0x00, 0xFC, 0xC3, 0x06, 0x00, 0x11, 0x3E, 0x0D, 0x00, 0xFC, 0xC4, 0x08, 0x80, 0x00, 0x10, 0x08, 0x82, 0x00, 0x14, 0x00, 0x00, 0x20, 0x01, 0x00, 0x00, 0x21, 0x02, 0x09, 0x80, 0x00, 0x10, 0x09, 0x82, 0x00, 0x14, 0x00, 0x00, 0x00, 0x02, 0x0C, 0x10, 0xF4, 0x60, 0x02, 0xC2, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, </Data>
+        </Program>
+        <Register>
+            <Name>DM0 Data</Name>
+            <Address>0</Address>
+            <Size>304</Size>
+            <Data>0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x18, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x18, 0x00, 0x00, 0x04, 0x18, 0x00, 0x00, 0x00, 0x1C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20, 0x8A, 0x00, 0x00, 0x2B, 0x4E, 0x00, 0x00, 0x56, 0x9C, 0x00, 0x00, 0x2B, 0x4E, 0xFF, 0x12, 0x45, 0x7F, 0x01, 0xED, 0x0D, 0x49, 0x00, 0x00, 0x2B, 0x4E, 0x00, 0x00, 0x56, 0x9C, 0x00, 0x00, 0x2B, 0x4E, 0xFF, 0x12, 0x45, 0x7F, 0x01, 0xED, 0x0D, 0x49, 0x00, 0x00, 0x2B, 0x4E, 0x00, 0x00, 0x56, 0x9C, 0x00, 0x00, 0x2B, 0x4E, 0xFF, 0x12, 0x45, 0x7F, 0x01, 0xED, 0x0D, 0x49, 0x00, 0x00, 0x2B, 0x4E, 0x00, 0x00, 0x56, 0x9C, 0x00, 0x00, 0x2B, 0x4E, 0xFF, 0x12, 0x45, 0x7F, 0x01, 0xED, 0x0D, 0x49, 0x00, 0x00, 0x2B, 0x4E, 0x00, 0x00, 0x56, 0x9C, 0x00, 0x00, 0x2B, 0x4E, 0xFF, 0x12, 0x45, 0x7F, 0x01, 0xED, 0x0D, 0x49, 0x00, 0x00, 0x2B, 0x4E, 0x00, 0x00, 0x56, 0x9C, 0x00, 0x00, 0x2B, 0x4E, 0xFF, 0x12, 0x45, 0x7F, 0x01, 0xED, 0x0D, 0x49, 0x00, 0x00, 0x00, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0xB5, 0x04, 0x81, 0x00, 0xB5, 0x04, 0x81, 0x00, 0x00, 0x01, 0xF4, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, </Data>
+        </Register>
+        <Register>
+            <Name>DM1 Data</Name>
+            <Address>25652</Address>
+            <Size>16</Size>
+            <Data>0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.KILL_CORE</Name>
+            <Address>62467</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x00, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.START_ADDRESS</Name>
+            <Address>62468</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x00, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.START_PULSE</Name>
+            <Address>62465</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x02, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.START_CORE</Name>
+            <Address>62466</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x00, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.START_CORE</Name>
+            <Address>62466</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x01, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.Start Delay</Name>
+            <Address>0</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x01, </Data>
+        </Register>
+        <Register>
+            <Name>IC 1.HIBERNATE</Name>
+            <Address>62464</Address>
+            <Size>2</Size>
+            <Data>0x00, 0x00, </Data>
+        </Register>
+        <Module>
+            <CellName>OutputMixer</CellName>
+            <Algorithm>
+                <AlgoName>ALG0</AlgoName>
+                <Description>Gain (HW slew)( 1 ) : Gain[ 0 ];</Description>
+                <ModuleParameter>
+                    <Name>HWGainADAU145XAlg1target</Name>
+                    <Type>Int32</Type>
+                    <Address>32</Address>
+                    <Value>1</Value>
+                    <Size>4</Size>
+                    <Data>0x01, 0x00, 0x00, 0x00, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>HWGainADAU145XAlg1slew_mode</Name>
+                    <Type>Int32</Type>
+                    <Address>33</Address>
+                    <Value>8330</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x20, 0x8A, </Data>
+                </ModuleParameter>
+            </Algorithm>
+            <Algorithm>
+                <AlgoName>ALG1</AlgoName>
+                <Description>Gain (no-slew)( 1 ) : Gain[ 0 ];</Description>
+                <ModuleParameter>
+                    <Name>GainAlgNS145X1gain</Name>
+                    <Type>Int32</Type>
+                    <Address>65</Address>
+                    <Value>1</Value>
+                    <Size>4</Size>
+                    <Data>0x01, 0x00, 0x00, 0x00, </Data>
+                </ModuleParameter>
+            </Algorithm>
+            <Algorithm>
+                <AlgoName>ALG2</AlgoName>
+                <Description>Gain (no-slew)( 1 ) : Gain[ 0 ];</Description>
+                <ModuleParameter>
+                    <Name>GainAlgNS145X2gain</Name>
+                    <Type>Int32</Type>
+                    <Address>69</Address>
+                    <Value>1</Value>
+                    <Size>4</Size>
+                    <Data>0x01, 0x00, 0x00, 0x00, </Data>
+                </ModuleParameter>
+            </Algorithm>
+            <Algorithm>
+                <AlgoName>ALG3</AlgoName>
+                <Description>Gain (no-slew)( 1 ) : Gain[ 0 ];</Description>
+                <ModuleParameter>
+                    <Name>GainAlgNS145X3gain</Name>
+                    <Type>Int32</Type>
+                    <Address>70</Address>
+                    <Value>1</Value>
+                    <Size>4</Size>
+                    <Data>0x01, 0x00, 0x00, 0x00, </Data>
+                </ModuleParameter>
+            </Algorithm>
+            <Algorithm>
+                <AlgoName>ALG4</AlgoName>
+                <Description>Gain (no-slew)( 1 ) : Gain[ 0 ];</Description>
+                <ModuleParameter>
+                    <Name>GainAlgNS145X4gain</Name>
+                    <Type>Int32</Type>
+                    <Address>71</Address>
+                    <Value>1</Value>
+                    <Size>4</Size>
+                    <Data>0x01, 0x00, 0x00, 0x00, </Data>
+                </ModuleParameter>
+            </Algorithm>
+        </Module>
+        <Module>
+            <CellName>LFEgain</CellName>
+            <Algorithm>
+                <AlgoName>ALG0</AlgoName>
+                <Description>Gain (no-slew)( 1 ) : Gain[ 0.7071 ];</Description>
+                <ModuleParameter>
+                    <Name>GainAlgNS145X5gain</Name>
+                    <Type>Int32</Type>
+                    <Address>66</Address>
+                    <Value>0.707099974155426</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0xB5, 0x04, 0x81, </Data>
+                </ModuleParameter>
+            </Algorithm>
+        </Module>
+        <Module>
+            <CellName>LFEfilter</CellName>
+            <Algorithm>
+                <AlgoName>ALG0</AlgoName>
+                <Description>Multi-Channel - Double Precision( 1 ) : Gain12[ 0 ],Frequency12[ 400 ],Type2[ 5 ];</Description>
+                <ModuleParameter>
+                    <Name>EQS300Multi1B2_1</Name>
+                    <Type>Int32</Type>
+                    <Address>34</Address>
+                    <Value>0.00066077709197998</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x2B, 0x4E, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi1B1_1</Name>
+                    <Type>Int32</Type>
+                    <Address>35</Address>
+                    <Value>0.00132155418395996</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x56, 0x9C, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi1B0_1</Name>
+                    <Type>Int32</Type>
+                    <Address>36</Address>
+                    <Value>0.00066077709197998</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x2B, 0x4E, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi1A2_1</Name>
+                    <Type>Int32</Type>
+                    <Address>37</Address>
+                    <Value>-0.928627073764801</Value>
+                    <Size>4</Size>
+                    <Data>0xFF, 0x12, 0x45, 0x7F, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi1A1_1</Name>
+                    <Type>Int32</Type>
+                    <Address>38</Address>
+                    <Value>1.92598396539688</Value>
+                    <Size>4</Size>
+                    <Data>0x01, 0xED, 0x0D, 0x49, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi1B2_2</Name>
+                    <Type>Int32</Type>
+                    <Address>39</Address>
+                    <Value>0.00066077709197998</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x2B, 0x4E, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi1B1_2</Name>
+                    <Type>Int32</Type>
+                    <Address>40</Address>
+                    <Value>0.00132155418395996</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x56, 0x9C, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi1B0_2</Name>
+                    <Type>Int32</Type>
+                    <Address>41</Address>
+                    <Value>0.00066077709197998</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x2B, 0x4E, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi1A2_2</Name>
+                    <Type>Int32</Type>
+                    <Address>42</Address>
+                    <Value>-0.928627073764801</Value>
+                    <Size>4</Size>
+                    <Data>0xFF, 0x12, 0x45, 0x7F, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi1A1_2</Name>
+                    <Type>Int32</Type>
+                    <Address>43</Address>
+                    <Value>1.92598396539688</Value>
+                    <Size>4</Size>
+                    <Data>0x01, 0xED, 0x0D, 0x49, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi1B2_3</Name>
+                    <Type>Int32</Type>
+                    <Address>44</Address>
+                    <Value>0.00066077709197998</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x2B, 0x4E, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi1B1_3</Name>
+                    <Type>Int32</Type>
+                    <Address>45</Address>
+                    <Value>0.00132155418395996</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x56, 0x9C, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi1B0_3</Name>
+                    <Type>Int32</Type>
+                    <Address>46</Address>
+                    <Value>0.00066077709197998</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x2B, 0x4E, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi1A2_3</Name>
+                    <Type>Int32</Type>
+                    <Address>47</Address>
+                    <Value>-0.928627073764801</Value>
+                    <Size>4</Size>
+                    <Data>0xFF, 0x12, 0x45, 0x7F, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi1A1_3</Name>
+                    <Type>Int32</Type>
+                    <Address>48</Address>
+                    <Value>1.92598396539688</Value>
+                    <Size>4</Size>
+                    <Data>0x01, 0xED, 0x0D, 0x49, </Data>
+                </ModuleParameter>
+            </Algorithm>
+        </Module>
+        <Module>
+            <CellName>SurroundGain</CellName>
+            <Algorithm>
+                <AlgoName>ALG0</AlgoName>
+                <Description>Gain (no-slew)( 1 ) : Gain[ 0.7071 ];</Description>
+                <ModuleParameter>
+                    <Name>GainAlgNS145X6gain</Name>
+                    <Type>Int32</Type>
+                    <Address>67</Address>
+                    <Value>0.707099974155426</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0xB5, 0x04, 0x81, </Data>
+                </ModuleParameter>
+            </Algorithm>
+        </Module>
+        <Module>
+            <CellName>SurroundDelay</CellName>
+            <Algorithm>
+                <AlgoName>ALG0</AlgoName>
+                <Description>Growable Delay( 1 ) : DelaySamples[ 500 ];</Description>
+                <ModuleParameter>
+                    <Name>ADAU145XMultDelayGrowAlg1delay</Name>
+                    <Type>Int32</Type>
+                    <Address>68</Address>
+                    <Value>500</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x01, 0xF4, </Data>
+                </ModuleParameter>
+            </Algorithm>
+        </Module>
+        <Module>
+            <CellName>SurroundFilter</CellName>
+            <Algorithm>
+                <AlgoName>ALG0</AlgoName>
+                <Description>Multi-Channel - Double Precision( 1 ) : Gain12[ 0 ],Frequency12[ 400 ],Type2[ 5 ];</Description>
+                <ModuleParameter>
+                    <Name>EQS300Multi2B2_1</Name>
+                    <Type>Int32</Type>
+                    <Address>49</Address>
+                    <Value>0.00066077709197998</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x2B, 0x4E, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi2B1_1</Name>
+                    <Type>Int32</Type>
+                    <Address>50</Address>
+                    <Value>0.00132155418395996</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x56, 0x9C, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi2B0_1</Name>
+                    <Type>Int32</Type>
+                    <Address>51</Address>
+                    <Value>0.00066077709197998</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x2B, 0x4E, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi2A2_1</Name>
+                    <Type>Int32</Type>
+                    <Address>52</Address>
+                    <Value>-0.928627073764801</Value>
+                    <Size>4</Size>
+                    <Data>0xFF, 0x12, 0x45, 0x7F, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi2A1_1</Name>
+                    <Type>Int32</Type>
+                    <Address>53</Address>
+                    <Value>1.92598396539688</Value>
+                    <Size>4</Size>
+                    <Data>0x01, 0xED, 0x0D, 0x49, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi2B2_2</Name>
+                    <Type>Int32</Type>
+                    <Address>54</Address>
+                    <Value>0.00066077709197998</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x2B, 0x4E, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi2B1_2</Name>
+                    <Type>Int32</Type>
+                    <Address>55</Address>
+                    <Value>0.00132155418395996</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x56, 0x9C, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi2B0_2</Name>
+                    <Type>Int32</Type>
+                    <Address>56</Address>
+                    <Value>0.00066077709197998</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x2B, 0x4E, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi2A2_2</Name>
+                    <Type>Int32</Type>
+                    <Address>57</Address>
+                    <Value>-0.928627073764801</Value>
+                    <Size>4</Size>
+                    <Data>0xFF, 0x12, 0x45, 0x7F, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi2A1_2</Name>
+                    <Type>Int32</Type>
+                    <Address>58</Address>
+                    <Value>1.92598396539688</Value>
+                    <Size>4</Size>
+                    <Data>0x01, 0xED, 0x0D, 0x49, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi2B2_3</Name>
+                    <Type>Int32</Type>
+                    <Address>59</Address>
+                    <Value>0.00066077709197998</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x2B, 0x4E, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi2B1_3</Name>
+                    <Type>Int32</Type>
+                    <Address>60</Address>
+                    <Value>0.00132155418395996</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x56, 0x9C, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi2B0_3</Name>
+                    <Type>Int32</Type>
+                    <Address>61</Address>
+                    <Value>0.00066077709197998</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x2B, 0x4E, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi2A2_3</Name>
+                    <Type>Int32</Type>
+                    <Address>62</Address>
+                    <Value>-0.928627073764801</Value>
+                    <Size>4</Size>
+                    <Data>0xFF, 0x12, 0x45, 0x7F, </Data>
+                </ModuleParameter>
+                <ModuleParameter>
+                    <Name>EQS300Multi2A1_3</Name>
+                    <Type>Int32</Type>
+                    <Address>63</Address>
+                    <Value>1.92598396539688</Value>
+                    <Size>4</Size>
+                    <Data>0x01, 0xED, 0x0D, 0x49, </Data>
+                </ModuleParameter>
+            </Algorithm>
+        </Module>
+        <Module>
+            <CellName>InputMute</CellName>
+            <Algorithm>
+                <AlgoName>ALG0</AlgoName>
+                <Description>Mute (no-slew)( 1 ) : Mute[ False ];</Description>
+                <ModuleParameter>
+                    <Name>MuteNoSlewADAU145XAlg1mute</Name>
+                    <Type>Int32</Type>
+                    <Address>64</Address>
+                    <Value>1</Value>
+                    <Size>4</Size>
+                    <Data>0x00, 0x00, 0x00, 0x01, </Data>
+                </ModuleParameter>
+            </Algorithm>
+        </Module>
+    </IC>
+</Schematic>
