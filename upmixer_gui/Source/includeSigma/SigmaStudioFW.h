@@ -8,7 +8,7 @@
 
 
 
-#include "RPiMute_IC_1.h" //NOTE: This must be changed to match the name of your program!!
+#include "basic51_IC_1.h" //NOTE: This must be changed to match the name of your program!!
 #include <stdint.h>
 #include <fcntl.h>
 #include <math.h>

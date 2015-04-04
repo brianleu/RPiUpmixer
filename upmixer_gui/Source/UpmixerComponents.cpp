@@ -19,9 +19,9 @@
 
 #include "UpmixerComponents.h"
 
-#include "SigmaStudioFW.h"
-#include "basic51_IC_1.h"
-#include "basic51_IC_1_PARAM.h"
+#include "includeSigma/SigmaStudioFW.h"
+#include "includeSigma/basic51_IC_1.h"
+#include "includeSigma/basic51_IC_1_PARAM.h"
 
 //==============================================================================
 UpmixerComponents::UpmixerComponents ()
