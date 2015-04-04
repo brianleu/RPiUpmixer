@@ -2,16 +2,13 @@
 
 <JUCERPROJECT id="OYTbEj" name="upmixer_gui" projectType="guiapp" version="1.0.0"
               bundleIdentifier="com.yourcompany.upmixer_gui" includeBinaryInAppConfig="1"
-              jucerVersion="3.1.0">
+              jucerVersion="3.1.1">
   <MAINGROUP id="mo5BP1" name="upmixer_gui">
     <GROUP id="{CC2A6874-5190-D8B1-2D74-4A3E84D9E72A}" name="Source">
       <FILE id="aMi76J" name="UpmixerComponents.cpp" compile="1" resource="0"
             file="Source/UpmixerComponents.cpp"/>
       <FILE id="gx1ebA" name="UpmixerComponents.h" compile="0" resource="0"
             file="Source/UpmixerComponents.h"/>
-      <FILE id="aKWmtY" name="MainComponent.cpp" compile="1" resource="0"
-            file="Source/MainComponent.cpp"/>
-      <FILE id="K4xNNX" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
       <FILE id="bNNJv2" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
     </GROUP>
   </MAINGROUP>
@@ -30,13 +27,6 @@
         <MODULEPATH id="juce_data_structures" path="../../Downloads/JUCE-OSX/modules"/>
         <MODULEPATH id="juce_gui_basics" path="../../Downloads/JUCE-OSX/modules"/>
         <MODULEPATH id="juce_gui_extra" path="../../Downloads/JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_cryptography" path="../../Downloads/JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_video" path="../../Downloads/JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_opengl" path="../../Downloads/JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="../../Downloads/JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="../../Downloads/JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="../../Downloads/JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="../../Downloads/JUCE-OSX/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
     <LINUX_MAKE targetFolder="Builds/Linux" extraDefs="JUCE_USE_XSHM=0 JUCE_USE_XINERAMA=0">
@@ -47,36 +37,22 @@
                        targetName="upmixer_gui"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_core" path="../../Downloads/JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_events" path="../../Downloads/JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_graphics" path="../../Downloads/JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_data_structures" path="../../Downloads/JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="../../Downloads/JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_gui_extra" path="../../Downloads/JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_cryptography" path="../../Downloads/JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_video" path="../../Downloads/JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_opengl" path="../../Downloads/JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="../../Downloads/JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="../../Downloads/JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="../../Downloads/JUCE-OSX/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="../../Downloads/JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_core" path="/home/rpi/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="/home/rpi/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="/home/rpi/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="/home/rpi/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="/home/rpi/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="/home/rpi/JUCE/modules"/>
       </MODULEPATHS>
     </LINUX_MAKE>
   </EXPORTFORMATS>
   <MODULES>
-    <MODULES id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
-    <MODULES id="juce_audio_devices" showAllCode="1" useLocalCopy="0"/>
-    <MODULES id="juce_audio_formats" showAllCode="1" useLocalCopy="0"/>
-    <MODULES id="juce_audio_processors" showAllCode="1" useLocalCopy="0"/>
     <MODULES id="juce_core" showAllCode="1" useLocalCopy="0"/>
-    <MODULES id="juce_cryptography" showAllCode="1" useLocalCopy="0"/>
     <MODULES id="juce_data_structures" showAllCode="1" useLocalCopy="0"/>
     <MODULES id="juce_events" showAllCode="1" useLocalCopy="0"/>
     <MODULES id="juce_graphics" showAllCode="1" useLocalCopy="0"/>
     <MODULES id="juce_gui_basics" showAllCode="1" useLocalCopy="0"/>
     <MODULES id="juce_gui_extra" showAllCode="1" useLocalCopy="0"/>
-    <MODULES id="juce_opengl" showAllCode="1" useLocalCopy="0"/>
-    <MODULES id="juce_video" showAllCode="1" useLocalCopy="0"/>
   </MODULES>
   <JUCEOPTIONS/>
 </JUCERPROJECT>

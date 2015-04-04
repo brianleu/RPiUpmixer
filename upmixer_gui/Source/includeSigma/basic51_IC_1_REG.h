@@ -1,7 +1,7 @@
 /*
  * File:           C:\Users\Brian\Documents\projects\RPiUpmixer\ExampleJuceProject\Source\includeSigma\basic51_IC_1_REG.h
  *
- * Created:        Friday, April 03, 2015 6:44:23 PM
+ * Created:        Saturday, April 04, 2015 3:35:44 PM
  * Description:    basic51:IC 1 control register definitions.
  *
  * This software is distributed in the hope that it will be useful,

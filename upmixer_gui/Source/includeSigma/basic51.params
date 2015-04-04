@@ -18,7 +18,7 @@ Parameter Data :
 
 Cell Name         = OutputMixer
 Parameter Name    = GainAlgNS145X1gain
-Parameter Address = 65
+Parameter Address = 80
 Parameter Value   = 1
 Parameter Data :
 0x01, 0x00, 0x00, 0x00, 
@@ -27,16 +27,16 @@ Parameter Data :
 
 Cell Name         = OutputMixer
 Parameter Name    = GainAlgNS145X2gain
-Parameter Address = 69
-Parameter Value   = 1
+Parameter Address = 84
+Parameter Value   = 1.99526232481003
 Parameter Data :
-0x01, 0x00, 0x00, 0x00, 
+0x01, 0xFE, 0xC9, 0x83, 
 
 
 
 Cell Name         = OutputMixer
 Parameter Name    = GainAlgNS145X3gain
-Parameter Address = 70
+Parameter Address = 85
 Parameter Value   = 1
 Parameter Data :
 0x01, 0x00, 0x00, 0x00, 
@@ -45,151 +45,160 @@ Parameter Data :
 
 Cell Name         = OutputMixer
 Parameter Name    = GainAlgNS145X4gain
-Parameter Address = 71
+Parameter Address = 86
 Parameter Value   = 1
 Parameter Data :
 0x01, 0x00, 0x00, 0x00, 
 
 
 
-Cell Name         = LFEgain
+Cell Name         = OutputMixer
+Parameter Name    = GainAlgNS145X7gain
+Parameter Address = 87
+Parameter Value   = 1
+Parameter Data :
+0x01, 0x00, 0x00, 0x00, 
+
+
+
+Cell Name         = CLFEgain
 Parameter Name    = GainAlgNS145X5gain
-Parameter Address = 66
+Parameter Address = 81
 Parameter Value   = 0.707099974155426
 Parameter Data :
 0x00, 0xB5, 0x04, 0x81, 
 
 
 
-Cell Name         = LFEfilter
+Cell Name         = CFilter
 Parameter Name    = EQS300Multi1B2_1
-Parameter Address = 34
+Parameter Address = 49
 Parameter Value   = 0.00066077709197998
 Parameter Data :
 0x00 ,	0x00 ,	0x2B ,	0x4E ,	
 
 
 
-Cell Name         = LFEfilter
+Cell Name         = CFilter
 Parameter Name    = EQS300Multi1B1_1
-Parameter Address = 35
+Parameter Address = 50
 Parameter Value   = 0.00132155418395996
 Parameter Data :
 0x00 ,	0x00 ,	0x56 ,	0x9C ,	
 
 
 
-Cell Name         = LFEfilter
+Cell Name         = CFilter
 Parameter Name    = EQS300Multi1B0_1
-Parameter Address = 36
+Parameter Address = 51
 Parameter Value   = 0.00066077709197998
 Parameter Data :
 0x00 ,	0x00 ,	0x2B ,	0x4E ,	
 
 
 
-Cell Name         = LFEfilter
+Cell Name         = CFilter
 Parameter Name    = EQS300Multi1A2_1
-Parameter Address = 37
+Parameter Address = 52
 Parameter Value   = -0.928627073764801
 Parameter Data :
 0xFF ,	0x12 ,	0x45 ,	0x7F ,	
 
 
 
-Cell Name         = LFEfilter
+Cell Name         = CFilter
 Parameter Name    = EQS300Multi1A1_1
-Parameter Address = 38
+Parameter Address = 53
 Parameter Value   = 1.92598396539688
 Parameter Data :
 0x01 ,	0xED ,	0x0D ,	0x49 ,	
 
 
 
-Cell Name         = LFEfilter
+Cell Name         = CFilter
 Parameter Name    = EQS300Multi1B2_2
-Parameter Address = 39
+Parameter Address = 54
 Parameter Value   = 0.00066077709197998
 Parameter Data :
 0x00 ,	0x00 ,	0x2B ,	0x4E ,	
 
 
 
-Cell Name         = LFEfilter
+Cell Name         = CFilter
 Parameter Name    = EQS300Multi1B1_2
-Parameter Address = 40
+Parameter Address = 55
 Parameter Value   = 0.00132155418395996
 Parameter Data :
 0x00 ,	0x00 ,	0x56 ,	0x9C ,	
 
 
 
-Cell Name         = LFEfilter
+Cell Name         = CFilter
 Parameter Name    = EQS300Multi1B0_2
-Parameter Address = 41
+Parameter Address = 56
 Parameter Value   = 0.00066077709197998
 Parameter Data :
 0x00 ,	0x00 ,	0x2B ,	0x4E ,	
 
 
 
-Cell Name         = LFEfilter
+Cell Name         = CFilter
 Parameter Name    = EQS300Multi1A2_2
-Parameter Address = 42
+Parameter Address = 57
 Parameter Value   = -0.928627073764801
 Parameter Data :
 0xFF ,	0x12 ,	0x45 ,	0x7F ,	
 
 
 
-Cell Name         = LFEfilter
+Cell Name         = CFilter
 Parameter Name    = EQS300Multi1A1_2
-Parameter Address = 43
+Parameter Address = 58
 Parameter Value   = 1.92598396539688
 Parameter Data :
 0x01 ,	0xED ,	0x0D ,	0x49 ,	
 
 
 
-Cell Name         = LFEfilter
+Cell Name         = CFilter
 Parameter Name    = EQS300Multi1B2_3
-Parameter Address = 44
+Parameter Address = 59
 Parameter Value   = 0.00066077709197998
 Parameter Data :
 0x00 ,	0x00 ,	0x2B ,	0x4E ,	
 
 
 
-Cell Name         = LFEfilter
+Cell Name         = CFilter
 Parameter Name    = EQS300Multi1B1_3
-Parameter Address = 45
+Parameter Address = 60
 Parameter Value   = 0.00132155418395996
 Parameter Data :
 0x00 ,	0x00 ,	0x56 ,	0x9C ,	
 
 
 
-Cell Name         = LFEfilter
+Cell Name         = CFilter
 Parameter Name    = EQS300Multi1B0_3
-Parameter Address = 46
+Parameter Address = 61
 Parameter Value   = 0.00066077709197998
 Parameter Data :
 0x00 ,	0x00 ,	0x2B ,	0x4E ,	
 
 
 
-Cell Name         = LFEfilter
+Cell Name         = CFilter
 Parameter Name    = EQS300Multi1A2_3
-Parameter Address = 47
+Parameter Address = 62
 Parameter Value   = -0.928627073764801
 Parameter Data :
 0xFF ,	0x12 ,	0x45 ,	0x7F ,	
 
 
 
-Cell Name         = LFEfilter
+Cell Name         = CFilter
 Parameter Name    = EQS300Multi1A1_3
-Parameter Address = 48
+Parameter Address = 63
 Parameter Value   = 1.92598396539688
 Parameter Data :
 0x01 ,	0xED ,	0x0D ,	0x49 ,	
@@ -198,7 +207,7 @@ Parameter Data :
 
 Cell Name         = SurroundGain
 Parameter Name    = GainAlgNS145X6gain
-Parameter Address = 67
+Parameter Address = 82
 Parameter Value   = 0.707099974155426
 Parameter Data :
 0x00, 0xB5, 0x04, 0x81, 
@@ -207,7 +216,7 @@ Parameter Data :
 
 Cell Name         = SurroundDelay
 Parameter Name    = ADAU145XMultDelayGrowAlg1delay
-Parameter Address = 68
+Parameter Address = 83
 Parameter Value   = 500
 Parameter Data :
 0x00, 0x00, 0x01, 0xF4, 
@@ -216,7 +225,7 @@ Parameter Data :
 
 Cell Name         = SurroundFilter
 Parameter Name    = EQS300Multi2B2_1
-Parameter Address = 49
+Parameter Address = 34
 Parameter Value   = 0.00066077709197998
 Parameter Data :
 0x00 ,	0x00 ,	0x2B ,	0x4E ,	
@@ -225,7 +234,7 @@ Parameter Data :
 
 Cell Name         = SurroundFilter
 Parameter Name    = EQS300Multi2B1_1
-Parameter Address = 50
+Parameter Address = 35
 Parameter Value   = 0.00132155418395996
 Parameter Data :
 0x00 ,	0x00 ,	0x56 ,	0x9C ,	
@@ -234,7 +243,7 @@ Parameter Data :
 
 Cell Name         = SurroundFilter
 Parameter Name    = EQS300Multi2B0_1
-Parameter Address = 51
+Parameter Address = 36
 Parameter Value   = 0.00066077709197998
 Parameter Data :
 0x00 ,	0x00 ,	0x2B ,	0x4E ,	
@@ -243,7 +252,7 @@ Parameter Data :
 
 Cell Name         = SurroundFilter
 Parameter Name    = EQS300Multi2A2_1
-Parameter Address = 52
+Parameter Address = 37
 Parameter Value   = -0.928627073764801
 Parameter Data :
 0xFF ,	0x12 ,	0x45 ,	0x7F ,	
@@ -252,7 +261,7 @@ Parameter Data :
 
 Cell Name         = SurroundFilter
 Parameter Name    = EQS300Multi2A1_1
-Parameter Address = 53
+Parameter Address = 38
 Parameter Value   = 1.92598396539688
 Parameter Data :
 0x01 ,	0xED ,	0x0D ,	0x49 ,	
@@ -261,7 +270,7 @@ Parameter Data :
 
 Cell Name         = SurroundFilter
 Parameter Name    = EQS300Multi2B2_2
-Parameter Address = 54
+Parameter Address = 39
 Parameter Value   = 0.00066077709197998
 Parameter Data :
 0x00 ,	0x00 ,	0x2B ,	0x4E ,	
@@ -270,7 +279,7 @@ Parameter Data :
 
 Cell Name         = SurroundFilter
 Parameter Name    = EQS300Multi2B1_2
-Parameter Address = 55
+Parameter Address = 40
 Parameter Value   = 0.00132155418395996
 Parameter Data :
 0x00 ,	0x00 ,	0x56 ,	0x9C ,	
@@ -279,7 +288,7 @@ Parameter Data :
 
 Cell Name         = SurroundFilter
 Parameter Name    = EQS300Multi2B0_2
-Parameter Address = 56
+Parameter Address = 41
 Parameter Value   = 0.00066077709197998
 Parameter Data :
 0x00 ,	0x00 ,	0x2B ,	0x4E ,	
@@ -288,7 +297,7 @@ Parameter Data :
 
 Cell Name         = SurroundFilter
 Parameter Name    = EQS300Multi2A2_2
-Parameter Address = 57
+Parameter Address = 42
 Parameter Value   = -0.928627073764801
 Parameter Data :
 0xFF ,	0x12 ,	0x45 ,	0x7F ,	
@@ -297,7 +306,7 @@ Parameter Data :
 
 Cell Name         = SurroundFilter
 Parameter Name    = EQS300Multi2A1_2
-Parameter Address = 58
+Parameter Address = 43
 Parameter Value   = 1.92598396539688
 Parameter Data :
 0x01 ,	0xED ,	0x0D ,	0x49 ,	
@@ -306,7 +315,7 @@ Parameter Data :
 
 Cell Name         = SurroundFilter
 Parameter Name    = EQS300Multi2B2_3
-Parameter Address = 59
+Parameter Address = 44
 Parameter Value   = 0.00066077709197998
 Parameter Data :
 0x00 ,	0x00 ,	0x2B ,	0x4E ,	
@@ -315,7 +324,7 @@ Parameter Data :
 
 Cell Name         = SurroundFilter
 Parameter Name    = EQS300Multi2B1_3
-Parameter Address = 60
+Parameter Address = 45
 Parameter Value   = 0.00132155418395996
 Parameter Data :
 0x00 ,	0x00 ,	0x56 ,	0x9C ,	
@@ -324,7 +333,7 @@ Parameter Data :
 
 Cell Name         = SurroundFilter
 Parameter Name    = EQS300Multi2B0_3
-Parameter Address = 61
+Parameter Address = 46
 Parameter Value   = 0.00066077709197998
 Parameter Data :
 0x00 ,	0x00 ,	0x2B ,	0x4E ,	
@@ -333,7 +342,7 @@ Parameter Data :
 
 Cell Name         = SurroundFilter
 Parameter Name    = EQS300Multi2A2_3
-Parameter Address = 62
+Parameter Address = 47
 Parameter Value   = -0.928627073764801
 Parameter Data :
 0xFF ,	0x12 ,	0x45 ,	0x7F ,	
@@ -342,7 +351,7 @@ Parameter Data :
 
 Cell Name         = SurroundFilter
 Parameter Name    = EQS300Multi2A1_3
-Parameter Address = 63
+Parameter Address = 48
 Parameter Value   = 1.92598396539688
 Parameter Data :
 0x01 ,	0xED ,	0x0D ,	0x49 ,	
@@ -351,10 +360,145 @@ Parameter Data :
 
 Cell Name         = InputMute
 Parameter Name    = MuteNoSlewADAU145XAlg1mute
-Parameter Address = 64
+Parameter Address = 79
 Parameter Value   = 1
 Parameter Data :
 0x00 ,	0x00 ,	0x00 ,	0x01 ,	
+
+
+
+Cell Name         = LFEFilter
+Parameter Name    = EQS300Multi3B2_1
+Parameter Address = 64
+Parameter Value   = 6.103515625E-05
+Parameter Data :
+0x00 ,	0x00 ,	0x04 ,	0x00 ,	
+
+
+
+Cell Name         = LFEFilter
+Parameter Name    = EQS300Multi3B1_1
+Parameter Address = 65
+Parameter Value   = 0.000122010707855225
+Parameter Data :
+0x00 ,	0x00 ,	0x07 ,	0xFF ,	
+
+
+
+Cell Name         = LFEFilter
+Parameter Name    = EQS300Multi3B0_1
+Parameter Address = 66
+Parameter Value   = 6.103515625E-05
+Parameter Data :
+0x00 ,	0x00 ,	0x04 ,	0x00 ,	
+
+
+
+Cell Name         = LFEFilter
+Parameter Name    = EQS300Multi3A2_1
+Parameter Address = 67
+Parameter Value   = -0.978030502796173
+Parameter Data :
+0xFF ,	0x05 ,	0x9F ,	0xCB ,	
+
+
+
+Cell Name         = LFEFilter
+Parameter Name    = EQS300Multi3A1_1
+Parameter Address = 68
+Parameter Value   = 1.97778648138046
+Parameter Data :
+0x01 ,	0xFA ,	0x50 ,	0x37 ,	
+
+
+
+Cell Name         = LFEFilter
+Parameter Name    = EQS300Multi3B2_2
+Parameter Address = 69
+Parameter Value   = 6.103515625E-05
+Parameter Data :
+0x00 ,	0x00 ,	0x04 ,	0x00 ,	
+
+
+
+Cell Name         = LFEFilter
+Parameter Name    = EQS300Multi3B1_2
+Parameter Address = 70
+Parameter Value   = 0.000122010707855225
+Parameter Data :
+0x00 ,	0x00 ,	0x07 ,	0xFF ,	
+
+
+
+Cell Name         = LFEFilter
+Parameter Name    = EQS300Multi3B0_2
+Parameter Address = 71
+Parameter Value   = 6.103515625E-05
+Parameter Data :
+0x00 ,	0x00 ,	0x04 ,	0x00 ,	
+
+
+
+Cell Name         = LFEFilter
+Parameter Name    = EQS300Multi3A2_2
+Parameter Address = 72
+Parameter Value   = -0.978030502796173
+Parameter Data :
+0xFF ,	0x05 ,	0x9F ,	0xCB ,	
+
+
+
+Cell Name         = LFEFilter
+Parameter Name    = EQS300Multi3A1_2
+Parameter Address = 73
+Parameter Value   = 1.97778648138046
+Parameter Data :
+0x01 ,	0xFA ,	0x50 ,	0x37 ,	
+
+
+
+Cell Name         = LFEFilter
+Parameter Name    = EQS300Multi3B2_3
+Parameter Address = 74
+Parameter Value   = 6.103515625E-05
+Parameter Data :
+0x00 ,	0x00 ,	0x04 ,	0x00 ,	
+
+
+
+Cell Name         = LFEFilter
+Parameter Name    = EQS300Multi3B1_3
+Parameter Address = 75
+Parameter Value   = 0.000122010707855225
+Parameter Data :
+0x00 ,	0x00 ,	0x07 ,	0xFF ,	
+
+
+
+Cell Name         = LFEFilter
+Parameter Name    = EQS300Multi3B0_3
+Parameter Address = 76
+Parameter Value   = 6.103515625E-05
+Parameter Data :
+0x00 ,	0x00 ,	0x04 ,	0x00 ,	
+
+
+
+Cell Name         = LFEFilter
+Parameter Name    = EQS300Multi3A2_3
+Parameter Address = 77
+Parameter Value   = -0.978030502796173
+Parameter Data :
+0xFF ,	0x05 ,	0x9F ,	0xCB ,	
+
+
+
+Cell Name         = LFEFilter
+Parameter Name    = EQS300Multi3A1_3
+Parameter Address = 78
+Parameter Value   = 1.97778648138046
+Parameter Data :
+0x01 ,	0xFA ,	0x50 ,	0x37 ,	
 
 
 

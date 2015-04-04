@@ -7,7 +7,7 @@
   the "//[xyz]" and "//[/xyz]" sections will be retained when the file is loaded
   and re-saved.
 
-  Created with Introjucer version: 3.1.0
+  Created with Introjucer version: 3.1.1
 
   ------------------------------------------------------------------------------
 
@@ -43,37 +43,27 @@ public:
     UpmixerComponents ();
     ~UpmixerComponents();
 
+    //==============================================================================
+    //[UserMethods]     -- You can add your own custom methods in this section.
+    //[/UserMethods]
+
     void paint (Graphics& g);
     void resized();
     void sliderValueChanged (Slider* sliderThatWasMoved);
     void buttonClicked (Button* buttonThatWasClicked);
-    void mouseDrag (const MouseEvent& event);
-    void handleMouse (const MouseEvent& event);
+    void mouseMove (const MouseEvent& e);
 
     // Binary resources:
     static const char* slide1_png;
     static const int slide1_pngSize;
     static const char* slide1_png2;
     static const int slide1_png2Size;
-    
-    bool demoMode;
-    bool userInputMode;
-    bool sourceMode;
-    bool reverbMode;
-    
-    double FLslidervalue;
-    double FRslidervalue;
-    double Cslidervalue;
-    double RLslidervalue;
-    double RRslidervalue;
-    double LFEslidervalue;
-    
-    String xCoord, yCoord;
-    int x, y;
-    
-    
+
 
 private:
+    //[UserVariables]   -- You can add your own custom variables in this section.
+    //[/UserVariables]
+
     //==============================================================================
     ScopedPointer<Slider> RRslider;
     ScopedPointer<Slider> RLslider;
@@ -86,15 +76,11 @@ private:
     ScopedPointer<TextButton> reverbButton;
     ScopedPointer<TextButton> userButton;
     ScopedPointer<Label> modeLabel;
-    ScopedPointer<Label> xLabel;
-    ScopedPointer<Label> yLabel;
-    
     Image cachedImage_slide1_png2;
 
 
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (UpmixerComponents)
-   
 };
 
 //[EndFile] You can add extra defines here...
