@@ -7,7 +7,7 @@
   the "//[xyz]" and "//[/xyz]" sections will be retained when the file is loaded
   and re-saved.
 
-  Created with Introjucer version: 3.1.1
+  Created with Introjucer version: 3.1.0
 
   ------------------------------------------------------------------------------
 
@@ -17,53 +17,43 @@
   ==============================================================================
 */
 
-//[Headers] You can add your own extra header files here...
-//[/Headers]
-
 #include "UpmixerComponents.h"
-
-
-//[MiscUserDefs] You can add your own user definitions and misc code here...
-//[/MiscUserDefs]
 
 //==============================================================================
 UpmixerComponents::UpmixerComponents ()
 {
-    //[Constructor_pre] You can add your own custom stuff here..
-    //[/Constructor_pre]
-
     addAndMakeVisible (RRslider = new Slider ("new slider"));
-    RRslider->setRange (0, 10, 0);
+    RRslider->setRange (0, 1, 0.01);
     RRslider->setSliderStyle (Slider::LinearVertical);
     RRslider->setTextBoxStyle (Slider::TextBoxBelow, false, 80, 20);
     RRslider->addListener (this);
 
     addAndMakeVisible (RLslider = new Slider ("new slider"));
-    RLslider->setRange (0, 10, 0);
+    RLslider->setRange (0, 1, 0.01);
     RLslider->setSliderStyle (Slider::LinearVertical);
     RLslider->setTextBoxStyle (Slider::TextBoxBelow, false, 80, 20);
     RLslider->addListener (this);
 
     addAndMakeVisible (LFEslider = new Slider ("new slider"));
-    LFEslider->setRange (0, 10, 0);
+    LFEslider->setRange (0, 0.5, 0.01);
     LFEslider->setSliderStyle (Slider::LinearVertical);
     LFEslider->setTextBoxStyle (Slider::TextBoxBelow, false, 80, 20);
     LFEslider->addListener (this);
 
     addAndMakeVisible (Cslider = new Slider ("new slider"));
-    Cslider->setRange (0, 10, 0);
+    Cslider->setRange (0, 2, 0.01);
     Cslider->setSliderStyle (Slider::LinearVertical);
     Cslider->setTextBoxStyle (Slider::TextBoxBelow, false, 80, 20);
     Cslider->addListener (this);
 
     addAndMakeVisible (FLslider = new Slider ("new slider"));
-    FLslider->setRange (0, 10, 0);
+    FLslider->setRange (0, 1, 0.01);
     FLslider->setSliderStyle (Slider::LinearVertical);
     FLslider->setTextBoxStyle (Slider::TextBoxBelow, false, 80, 20);
     FLslider->addListener (this);
 
     addAndMakeVisible (FRslider = new Slider ("new slider"));
-    FRslider->setRange (0, 10, 0);
+    FRslider->setRange (0, 1, 0.01);
     FRslider->setSliderStyle (Slider::LinearVertical);
     FRslider->setTextBoxStyle (Slider::TextBoxBelow, false, 80, 20);
     FRslider->addListener (this);
@@ -91,24 +81,30 @@ UpmixerComponents::UpmixerComponents ()
     modeLabel->setEditable (false, false, false);
     modeLabel->setColour (TextEditor::textColourId, Colours::black);
     modeLabel->setColour (TextEditor::backgroundColourId, Colour (0x00000000));
+    
+    addAndMakeVisible (xLabel = new Label ("new label",
+                                              String::empty));
+    modeLabel->setFont (Font (15.00f, Font::plain));
+    modeLabel->setJustificationType (Justification::centred);
+    modeLabel->setEditable (false, false, false);
+    modeLabel->setColour (TextEditor::textColourId, Colours::black);
+    modeLabel->setColour (TextEditor::backgroundColourId, Colour (0x00000000));
+    
+    addAndMakeVisible (yLabel = new Label ("new label",
+                                              String::empty));
+    modeLabel->setFont (Font (15.00f, Font::plain));
+    modeLabel->setJustificationType (Justification::centred);
+    modeLabel->setEditable (false, false, false);
+    modeLabel->setColour (TextEditor::textColourId, Colours::black);
+    modeLabel->setColour (TextEditor::backgroundColourId, Colour (0x00000000));
 
     cachedImage_slide1_png2 = ImageCache::getFromMemory (slide1_png2, slide1_png2Size);
 
-    //[UserPreSize]
-    //[/UserPreSize]
-
     setSize (800, 480);
-
-
-    //[Constructor] You can add your own custom stuff here..
-    //[/Constructor]
 }
 
 UpmixerComponents::~UpmixerComponents()
 {
-    //[Destructor_pre]. You can add your own custom destruction code here..
-    //[/Destructor_pre]
-
     RRslider = nullptr;
     RLslider = nullptr;
     LFEslider = nullptr;
@@ -120,34 +116,24 @@ UpmixerComponents::~UpmixerComponents()
     reverbButton = nullptr;
     userButton = nullptr;
     modeLabel = nullptr;
-
-
-    //[Destructor]. You can add your own custom destruction code here..
-    //[/Destructor]
+    
+    xLabel = nullptr;
+    yLabel = nullptr;
 }
 
 //==============================================================================
 void UpmixerComponents::paint (Graphics& g)
 {
-    //[UserPrePaint] Add your own custom painting code here..
-    //[/UserPrePaint]
-
     g.fillAll (Colours::white);
 
     g.setColour (Colours::black);
     g.drawImage (cachedImage_slide1_png2,
                  0, 0, 800, 480,
                  0, 0, cachedImage_slide1_png2.getWidth(), cachedImage_slide1_png2.getHeight());
-
-    //[UserPaint] Add your own custom painting code here..
-    //[/UserPaint]
 }
 
 void UpmixerComponents::resized()
 {
-    //[UserPreResize] Add your own custom resize code here..
-    //[/UserPreResize]
-
     RRslider->setBounds (277, 216, 40, 200);
     RLslider->setBounds (225, 216, 40, 200);
     LFEslider->setBounds (328, 216, 40, 200);
@@ -158,92 +144,142 @@ void UpmixerComponents::resized()
     sourceButton->setBounds (598, 72, 150, 24);
     reverbButton->setBounds (598, 96, 150, 24);
     userButton->setBounds (598, 48, 150, 24);
-    modeLabel->setBounds (240, 85, 144, 24);
-    //[UserResized] Add your own custom resize handling here..
-    //[/UserResized]
+    modeLabel->setBounds (240, 79, 144, 24);
+    
+    xLabel->setBounds (240, 85, 144, 24);
+    yLabel->setBounds (240, 99, 144, 24);
 }
 
 void UpmixerComponents::sliderValueChanged (Slider* sliderThatWasMoved)
 {
-    //[UsersliderValueChanged_Pre]
-    //[/UsersliderValueChanged_Pre]
-
-    if (sliderThatWasMoved == RRslider)
-    {
-        //[UserSliderCode_RRslider] -- add your slider handling code here..
-        //[/UserSliderCode_RRslider]
+    if (userInputMode == true || sourceMode == true){
+        
+        if (sliderThatWasMoved == RRslider)
+        {
+            RRslidervalue = RRslider->getValue();
+        }
+        else if (sliderThatWasMoved == RLslider)
+        {
+            RLslidervalue = RLslider->getValue();
+        }
+        else if (sliderThatWasMoved == LFEslider)
+        {
+            LFEslidervalue = LFEslider->getValue();
+        }
+        else if (sliderThatWasMoved == Cslider)
+        {
+            Cslidervalue = Cslider->getValue();
+        }
+        else if (sliderThatWasMoved == FLslider)
+        {
+            FLslidervalue = FLslider->getValue();
+        }
+        else if (sliderThatWasMoved == FRslider)
+        {
+            FRslidervalue = FRslider->getValue();
+        }
+    
+        //==================================
+        // Send SPI message containing gains
+        //==================================
+        
     }
-    else if (sliderThatWasMoved == RLslider)
-    {
-        //[UserSliderCode_RLslider] -- add your slider handling code here..
-        //[/UserSliderCode_RLslider]
-    }
-    else if (sliderThatWasMoved == LFEslider)
-    {
-        //[UserSliderCode_LFEslider] -- add your slider handling code here..
-        //[/UserSliderCode_LFEslider]
-    }
-    else if (sliderThatWasMoved == Cslider)
-    {
-        //[UserSliderCode_Cslider] -- add your slider handling code here..
-        //[/UserSliderCode_Cslider]
-    }
-    else if (sliderThatWasMoved == FLslider)
-    {
-        //[UserSliderCode_FLslider] -- add your slider handling code here..
-        //[/UserSliderCode_FLslider]
-    }
-    else if (sliderThatWasMoved == FRslider)
-    {
-        //[UserSliderCode_FRslider] -- add your slider handling code here..
-        //[/UserSliderCode_FRslider]
-    }
-
-    //[UsersliderValueChanged_Post]
-    //[/UsersliderValueChanged_Post]
+    
+    
 }
 
 void UpmixerComponents::buttonClicked (Button* buttonThatWasClicked)
 {
-    //[UserbuttonClicked_Pre]
-    //[/UserbuttonClicked_Pre]
+    // Set all the sliders to zero
+    FLslider->setValue(0);
+    FRslider->setValue(0);
+    Cslider->setValue(0);
+    RLslider->setValue(0);
+    RRslider->setValue(0);
+    LFEslider->setValue(0);
 
     if (buttonThatWasClicked == demoButton)
     {
-        //[UserButtonCode_demoButton] -- add your button handler code here..
-        //[/UserButtonCode_demoButton]
+        demoMode = true;
+        modeLabel->setText("Demo",sendNotification);
     }
     else if (buttonThatWasClicked == sourceButton)
     {
-        //[UserButtonCode_sourceButton] -- add your button handler code here..
-        //[/UserButtonCode_sourceButton]
+        sourceMode = true;
+        modeLabel->setText("Source Control",sendNotification);
+        LFEslider->setValue(0.25);
     }
     else if (buttonThatWasClicked == reverbButton)
     {
-        //[UserButtonCode_reverbButton] -- add your button handler code here..
-        //[/UserButtonCode_reverbButton]
+        reverbMode = true;
+        modeLabel->setText("Reverb Effect",sendNotification);
     }
     else if (buttonThatWasClicked == userButton)
     {
-        //[UserButtonCode_userButton] -- add your button handler code here..
-        //[/UserButtonCode_userButton]
+        userInputMode = true;
+        modeLabel->setText("User Input",sendNotification);
     }
-
-    //[UserbuttonClicked_Post]
-    //[/UserbuttonClicked_Post]
 }
 
-void UpmixerComponents::mouseMove (const MouseEvent& e)
+void UpmixerComponents::mouseDrag (const MouseEvent& event)
 {
-    //[UserCode_mouseMove] -- Add your code here...
-    //[/UserCode_mouseMove]
+    if (sourceMode){
+        handleMouse (event);
+    }
 }
 
-
-
-//[MiscUserCode] You can add your own definitions of your custom methods or any other code here...
-//[/MiscUserCode]
-
+void UpmixerComponents::handleMouse (const MouseEvent& event)
+{
+    if (sourceMode){
+        
+        x = event.x;
+        y = event.y;
+        
+        // If the mouse is outside of the grid range
+        // saturate to the max values of x and y
+        
+        if (x > 736)
+            x = 736;
+        else if (x < 451)
+            x = 451;
+        
+        if (y > 430)
+            y = 430;
+        else if (y < 173)
+            y = 173;
+        
+        // Convert x and y to strings
+        xCoord = String(x);
+        yCoord = String(y);
+        
+        //xLabel->setText(xCoord, sendNotification);
+        //yLabel->setText(yCoord, sendNotification);
+        
+        double gain;
+        
+        // Update the gain values based on the distance from each speaker
+        
+        // FL gain
+        gain = 50 / (sqrt (pow((x - 451), 2) + pow((y - 173), 2)) );
+        FLslider->setValue(gain);
+        
+        // FR gain
+        gain = 50 / (sqrt (pow((x - 736), 2) + pow((y - 173), 2)) );
+        FRslider->setValue(gain);
+        
+        // C gain
+        gain = 100 / (sqrt (pow((x - 590), 2) + pow((y - 302), 2)) );
+        Cslider->setValue(gain);
+        
+        // RL gain
+        gain = 50 / (sqrt (pow((x - 451), 2) + pow((y - 430), 2)) );
+        RLslider->setValue(gain);
+    
+        // RR gain
+        gain = 50 / (sqrt (pow((x - 736), 2) + pow((y - 430), 2)) );
+        RRslider->setValue(gain);
+    }
+}
 
 //==============================================================================
 #if 0
