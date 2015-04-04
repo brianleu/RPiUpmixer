@@ -10,18 +10,18 @@ Parameter Data :
 Cell Name         = OutputMixer
 Parameter Name    = HWGainADAU145XAlg1target
 Parameter Address = 32
-Parameter Value   = 1
+Parameter Value   = 0.794328212738037
 Parameter Data :
-0x01, 0x00, 0x00, 0x00, 
+0x00, 0xCB, 0x59, 0x18, 
 
 
 
 Cell Name         = OutputMixer
 Parameter Name    = GainAlgNS145X1gain
 Parameter Address = 80
-Parameter Value   = 1
+Parameter Value   = 0.794328212738037
 Parameter Data :
-0x01, 0x00, 0x00, 0x00, 
+0x00, 0xCB, 0x59, 0x18, 
 
 
 

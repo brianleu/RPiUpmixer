@@ -1,7 +1,7 @@
 /*
  * File:           defines.h
  *
- * Created:        Saturday, April 04, 2015 3:35:44 PM
+ * Created:        Saturday, April 04, 2015 5:32:18 PM
  * Description:    basic51 IC default download data definitions.
  *
  * This software is distributed in the hope that it will be useful,
