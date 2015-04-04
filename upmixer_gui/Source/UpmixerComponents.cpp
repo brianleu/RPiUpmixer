@@ -19,6 +19,10 @@
 
 #include "UpmixerComponents.h"
 
+#include "SigmaStudioFW.h"
+#include "basic51_IC_1.h"
+#include "basic51_IC_1_PARAM.h"
+
 //==============================================================================
 UpmixerComponents::UpmixerComponents ()
 {
@@ -101,6 +105,8 @@ UpmixerComponents::UpmixerComponents ()
     cachedImage_slide1_png2 = ImageCache::getFromMemory (slide1_png2, slide1_png2Size);
 
     setSize (800, 480);
+
+    default_download_IC_1();
 }
 
 UpmixerComponents::~UpmixerComponents()
@@ -179,9 +185,13 @@ void UpmixerComponents::sliderValueChanged (Slider* sliderThatWasMoved)
             FRslidervalue = FRslider->getValue();
         }
     
-        //==================================
-        // Send SPI message containing gains
-        //==================================
+    	// Write Gain Values to SIGMA
+        SIGMA_WRITE_LINEAR_GAIN(DEVICE_ADDR_IC_1, MOD_OUTPUTMIXER_ALG1_GAINALGNS145X1GAIN_ADDR, FLslidervalue);
+        SIGMA_WRITE_LINEAR_GAIN(DEVICE_ADDR_IC_1, MOD_OUTPUTMIXER_ALG2_GAINALGNS145X2GAIN_ADDR, FRslidervalue);
+        SIGMA_WRITE_LINEAR_GAIN(DEVICE_ADDR_IC_1, MOD_OUTPUTMIXER_ALG3_GAINALGNS145X3GAIN_ADDR, Cslidervalue);
+        SIGMA_WRITE_LINEAR_GAIN(DEVICE_ADDR_IC_1, MOD_OUTPUTMIXER_ALG4_GAINALGNS145X4GAIN_ADDR, LFEslidervalue);
+        SIGMA_WRITE_LINEAR_GAIN(DEVICE_ADDR_IC_1, MOD_OUTPUTMIXER_ALG5_GAINALGNS145X5GAIN_ADDR, RLslidervalue);
+        SIGMA_WRITE_LINEAR_GAIN(DEVICE_ADDR_IC_1, MOD_OUTPUTMIXER_ALG6_GAINALGNS145X6GAIN_ADDR, RRslidervalue);
         
     }
     
