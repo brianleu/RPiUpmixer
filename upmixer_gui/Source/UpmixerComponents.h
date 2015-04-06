@@ -36,7 +36,7 @@
 */
 class UpmixerComponents  : public Component,
                            public SliderListener,
-                           public ButtonListener
+                           public ComboBoxListener
 {
 public:
     //==============================================================================
@@ -46,20 +46,25 @@ public:
     void paint (Graphics& g);
     void resized();
     void sliderValueChanged (Slider* sliderThatWasMoved);
-    void buttonClicked (Button* buttonThatWasClicked);
+    void comboBoxChanged (ComboBox* comboBoxThatHasChanged);
     void mouseDrag (const MouseEvent& event);
     void handleMouse (const MouseEvent& event);
-
+    
     // Binary resources:
     static const char* slide1_png;
     static const int slide1_pngSize;
     static const char* slide1_png2;
     static const int slide1_png2Size;
+    static const char* slide1_png3;
+    static const int slide1_png3Size;
+    static const char* slide1_png4;
+    static const int slide1_png4Size;
     
-    bool demoMode;
+    bool dopplerMode;
     bool userInputMode;
     bool sourceMode;
-    bool reverbMode;
+    bool encoderMode;
+    bool decoderMode;
     
     double FLslidervalue;
     double FRslidervalue;
@@ -68,10 +73,13 @@ public:
     double RRslidervalue;
     double LFEslidervalue;
     
+    double delaySlidervalue;
+    double centerCutoffvalue;
+    double surroundCutoffvalue;
+    double LFECutoffvalue;
+    
     String xCoord, yCoord;
     int x, y;
-    
-    
 
 private:
     //==============================================================================
@@ -81,15 +89,15 @@ private:
     ScopedPointer<Slider> Cslider;
     ScopedPointer<Slider> FLslider;
     ScopedPointer<Slider> FRslider;
-    ScopedPointer<TextButton> demoButton;
-    ScopedPointer<TextButton> sourceButton;
-    ScopedPointer<TextButton> reverbButton;
-    ScopedPointer<TextButton> userButton;
     ScopedPointer<Label> modeLabel;
-    ScopedPointer<Label> xLabel;
-    ScopedPointer<Label> yLabel;
+    ScopedPointer<Slider> cutoffSliderLFE;
+    ScopedPointer<Slider> cutoffSliderSurround;
+    ScopedPointer<Slider> cutoffSliderC;
+    ScopedPointer<Slider> delaySlider;
+    ScopedPointer<ComboBox> sourceComboBox;
+    ScopedPointer<ComboBox> modeComboBox;
     
-    Image cachedImage_slide1_png2;
+    Image cachedImage_slide1_png4;
 
 
     //==============================================================================
