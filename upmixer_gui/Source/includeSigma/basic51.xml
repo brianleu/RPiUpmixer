@@ -315,7 +315,7 @@
             <Name>DM0 Data</Name>
             <Address>0</Address>
             <Size>372</Size>
-            <Data>0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x11, 0x54, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x11, 0x54, 0x00, 0x00, 0x11, 0x54, 0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20, 0x8A, 0x00, 0x00, 0x04, 0xBB, 0x00, 0x00, 0x09, 0x77, 0x00, 0x00, 0x04, 0xBB, 0xFF, 0x06, 0x1D, 0x97, 0x01, 0xF9, 0xCF, 0x7C, 0x00, 0x00, 0x04, 0xBB, 0x00, 0x00, 0x09, 0x77, 0x00, 0x00, 0x04, 0xBB, 0xFF, 0x06, 0x1D, 0x97, 0x01, 0xF9, 0xCF, 0x7C, 0x00, 0x00, 0x04, 0xBB, 0x00, 0x00, 0x09, 0x77, 0x00, 0x00, 0x04, 0xBB, 0xFF, 0x06, 0x1D, 0x97, 0x01, 0xF9, 0xCF, 0x7C, 0x00, 0x00, 0x33, 0x24, 0x00, 0x00, 0x66, 0x47, 0x00, 0x00, 0x33, 0x24, 0xFF, 0x13, 0xD2, 0xB9, 0x01, 0xEB, 0x60, 0xB8, 0x00, 0x00, 0x33, 0x24, 0x00, 0x00, 0x66, 0x47, 0x00, 0x00, 0x33, 0x24, 0xFF, 0x13, 0xD2, 0xB9, 0x01, 0xEB, 0x60, 0xB8, 0x00, 0x00, 0x33, 0x24, 0x00, 0x00, 0x66, 0x47, 0x00, 0x00, 0x33, 0x24, 0xFF, 0x13, 0xD2, 0xB9, 0x01, 0xEB, 0x60, 0xB8, 0x00, 0x00, 0x33, 0x24, 0x00, 0x00, 0x66, 0x47, 0x00, 0x00, 0x33, 0x24, 0xFF, 0x13, 0xD2, 0xB9, 0x01, 0xEB, 0x60, 0xB8, 0x00, 0x00, 0x33, 0x24, 0x00, 0x00, 0x66, 0x47, 0x00, 0x00, 0x33, 0x24, 0xFF, 0x13, 0xD2, 0xB9, 0x01, 0xEB, 0x60, 0xB8, 0x00, 0x00, 0x33, 0x24, 0x00, 0x00, 0x66, 0x47, 0x00, 0x00, 0x33, 0x24, 0xFF, 0x13, 0xD2, 0xB9, 0x01, 0xEB, 0x60, 0xB8, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x40, 0x00, 0x00, 0x01, 0x40, 0x00, 0x00, 0x00, 0x00, 0x01, 0xF4, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, </Data>
+            <Data>0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x11, 0x54, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x11, 0x54, 0x00, 0x00, 0x11, 0x54, 0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20, 0x8A, 0x00, 0x00, 0x08, 0x61, 0x00, 0x00, 0x10, 0xC2, 0x00, 0x00, 0x08, 0x61, 0xFF, 0x08, 0x1F, 0x18, 0x01, 0xF7, 0xBF, 0x64, 0x00, 0x00, 0x08, 0x61, 0x00, 0x00, 0x10, 0xC2, 0x00, 0x00, 0x08, 0x61, 0xFF, 0x08, 0x1F, 0x18, 0x01, 0xF7, 0xBF, 0x64, 0x00, 0x00, 0x08, 0x61, 0x00, 0x00, 0x10, 0xC2, 0x00, 0x00, 0x08, 0x61, 0xFF, 0x08, 0x1F, 0x18, 0x01, 0xF7, 0xBF, 0x64, 0x00, 0x0E, 0xA4, 0xAF, 0x00, 0x1D, 0x49, 0x5E, 0x00, 0x0E, 0xA4, 0xAF, 0xFF, 0x8D, 0x64, 0xCA, 0x01, 0x38, 0x08, 0x7A, 0x00, 0x0E, 0xA4, 0xAF, 0x00, 0x1D, 0x49, 0x5E, 0x00, 0x0E, 0xA4, 0xAF, 0xFF, 0x8D, 0x64, 0xCA, 0x01, 0x38, 0x08, 0x7A, 0x00, 0x0E, 0xA4, 0xAF, 0x00, 0x1D, 0x49, 0x5E, 0x00, 0x0E, 0xA4, 0xAF, 0xFF, 0x8D, 0x64, 0xCA, 0x01, 0x38, 0x08, 0x7A, 0x00, 0x01, 0x2D, 0xBA, 0x00, 0x02, 0x5B, 0x75, 0x00, 0x01, 0x2D, 0xBA, 0xFF, 0x2E, 0xB7, 0x82, 0x01, 0xCC, 0x91, 0x95, 0x00, 0x01, 0x2D, 0xBA, 0x00, 0x02, 0x5B, 0x75, 0x00, 0x01, 0x2D, 0xBA, 0xFF, 0x2E, 0xB7, 0x82, 0x01, 0xCC, 0x91, 0x95, 0x00, 0x01, 0x2D, 0xBA, 0x00, 0x02, 0x5B, 0x75, 0x00, 0x01, 0x2D, 0xBA, 0xFF, 0x2E, 0xB7, 0x82, 0x01, 0xCC, 0x91, 0x95, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x40, 0x00, 0x00, 0x01, 0x40, 0x00, 0x00, 0x00, 0x00, 0x01, 0xB9, 0x00, 0xF3, 0x13, 0x27, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, </Data>
         </Register>
         <Register>
             <Name>DM1 Data</Name>
@@ -421,9 +421,9 @@
                     <Name>GainAlgNS145X3gain</Name>
                     <Type>Int32</Type>
                     <Address>85</Address>
-                    <Value>1</Value>
+                    <Value>0.949510991573334</Value>
                     <Size>4</Size>
-                    <Data>0x01, 0x00, 0x00, 0x00, </Data>
+                    <Data>0x00, 0xF3, 0x13, 0x27, </Data>
                 </ModuleParameter>
             </Algorithm>
             <Algorithm>
@@ -482,126 +482,126 @@
             <CellName>CFilter</CellName>
             <Algorithm>
                 <AlgoName>ALG0</AlgoName>
-                <Description>Multi-Channel - Double Precision( 1 ) : Gain12[ 0 ],Frequency12[ 400 ],Type2[ 5 ];</Description>
+                <Description>Multi-Channel - Double Precision( 1 ) : Gain12[ 0 ],Frequency12[ 4000 ],Type2[ 5 ];</Description>
                 <ModuleParameter>
                     <Name>EQS300Multi1B2_1</Name>
                     <Type>Int32</Type>
                     <Address>49</Address>
-                    <Value>0.000780344009399414</Value>
+                    <Value>0.0572003722190857</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x33, 0x24, </Data>
+                    <Data>0x00, 0x0E, 0xA4, 0xAF, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi1B1_1</Name>
                     <Type>Int32</Type>
                     <Address>50</Address>
-                    <Value>0.00156062841415405</Value>
+                    <Value>0.114400744438171</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x66, 0x47, </Data>
+                    <Data>0x00, 0x1D, 0x49, 0x5E, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi1B0_1</Name>
                     <Type>Int32</Type>
                     <Address>51</Address>
-                    <Value>0.000780344009399414</Value>
+                    <Value>0.0572003722190857</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x33, 0x24, </Data>
+                    <Data>0x00, 0x0E, 0xA4, 0xAF, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi1A2_1</Name>
                     <Type>Int32</Type>
                     <Address>52</Address>
-                    <Value>-0.922565877437592</Value>
+                    <Value>-0.447680830955505</Value>
                     <Size>4</Size>
-                    <Data>0xFF, 0x13, 0xD2, 0xB9, </Data>
+                    <Data>0xFF, 0x8D, 0x64, 0xCA, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi1A1_1</Name>
                     <Type>Int32</Type>
                     <Address>53</Address>
-                    <Value>1.91944456100464</Value>
+                    <Value>1.21887934207916</Value>
                     <Size>4</Size>
-                    <Data>0x01, 0xEB, 0x60, 0xB8, </Data>
+                    <Data>0x01, 0x38, 0x08, 0x7A, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi1B2_2</Name>
                     <Type>Int32</Type>
                     <Address>54</Address>
-                    <Value>0.000780344009399414</Value>
+                    <Value>0.0572003722190857</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x33, 0x24, </Data>
+                    <Data>0x00, 0x0E, 0xA4, 0xAF, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi1B1_2</Name>
                     <Type>Int32</Type>
                     <Address>55</Address>
-                    <Value>0.00156062841415405</Value>
+                    <Value>0.114400744438171</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x66, 0x47, </Data>
+                    <Data>0x00, 0x1D, 0x49, 0x5E, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi1B0_2</Name>
                     <Type>Int32</Type>
                     <Address>56</Address>
-                    <Value>0.000780344009399414</Value>
+                    <Value>0.0572003722190857</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x33, 0x24, </Data>
+                    <Data>0x00, 0x0E, 0xA4, 0xAF, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi1A2_2</Name>
                     <Type>Int32</Type>
                     <Address>57</Address>
-                    <Value>-0.922565877437592</Value>
+                    <Value>-0.447680830955505</Value>
                     <Size>4</Size>
-                    <Data>0xFF, 0x13, 0xD2, 0xB9, </Data>
+                    <Data>0xFF, 0x8D, 0x64, 0xCA, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi1A1_2</Name>
                     <Type>Int32</Type>
                     <Address>58</Address>
-                    <Value>1.91944456100464</Value>
+                    <Value>1.21887934207916</Value>
                     <Size>4</Size>
-                    <Data>0x01, 0xEB, 0x60, 0xB8, </Data>
+                    <Data>0x01, 0x38, 0x08, 0x7A, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi1B2_3</Name>
                     <Type>Int32</Type>
                     <Address>59</Address>
-                    <Value>0.000780344009399414</Value>
+                    <Value>0.0572003722190857</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x33, 0x24, </Data>
+                    <Data>0x00, 0x0E, 0xA4, 0xAF, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi1B1_3</Name>
                     <Type>Int32</Type>
                     <Address>60</Address>
-                    <Value>0.00156062841415405</Value>
+                    <Value>0.114400744438171</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x66, 0x47, </Data>
+                    <Data>0x00, 0x1D, 0x49, 0x5E, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi1B0_3</Name>
                     <Type>Int32</Type>
                     <Address>61</Address>
-                    <Value>0.000780344009399414</Value>
+                    <Value>0.0572003722190857</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x33, 0x24, </Data>
+                    <Data>0x00, 0x0E, 0xA4, 0xAF, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi1A2_3</Name>
                     <Type>Int32</Type>
                     <Address>62</Address>
-                    <Value>-0.922565877437592</Value>
+                    <Value>-0.447680830955505</Value>
                     <Size>4</Size>
-                    <Data>0xFF, 0x13, 0xD2, 0xB9, </Data>
+                    <Data>0xFF, 0x8D, 0x64, 0xCA, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi1A1_3</Name>
                     <Type>Int32</Type>
                     <Address>63</Address>
-                    <Value>1.91944456100464</Value>
+                    <Value>1.21887934207916</Value>
                     <Size>4</Size>
-                    <Data>0x01, 0xEB, 0x60, 0xB8, </Data>
+                    <Data>0x01, 0x38, 0x08, 0x7A, </Data>
                 </ModuleParameter>
             </Algorithm>
         </Module>
@@ -624,14 +624,14 @@
             <CellName>SurroundDelay</CellName>
             <Algorithm>
                 <AlgoName>ALG0</AlgoName>
-                <Description>Growable Delay( 1 ) : DelaySamples[ 500 ];</Description>
+                <Description>Growable Delay( 1 ) : DelaySamples[ 441 ];</Description>
                 <ModuleParameter>
                     <Name>ADAU145XMultDelayGrowAlg1delay</Name>
                     <Type>Int32</Type>
                     <Address>84</Address>
-                    <Value>500</Value>
+                    <Value>441</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x01, 0xF4, </Data>
+                    <Data>0x00, 0x00, 0x01, 0xB9, </Data>
                 </ModuleParameter>
             </Algorithm>
         </Module>
@@ -639,126 +639,126 @@
             <CellName>SurroundFilter</CellName>
             <Algorithm>
                 <AlgoName>ALG0</AlgoName>
-                <Description>Multi-Channel - Double Precision( 1 ) : Gain12[ 0 ],Frequency12[ 400 ],Type2[ 5 ];</Description>
+                <Description>Multi-Channel - Double Precision( 1 ) : Gain12[ 0 ],Frequency12[ 1000 ],Type2[ 5 ];</Description>
                 <ModuleParameter>
                     <Name>EQS300Multi2B2_1</Name>
                     <Type>Int32</Type>
                     <Address>64</Address>
-                    <Value>0.000780344009399414</Value>
+                    <Value>0.00460398197174072</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x33, 0x24, </Data>
+                    <Data>0x00, 0x01, 0x2D, 0xBA, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi2B1_1</Name>
                     <Type>Int32</Type>
                     <Address>65</Address>
-                    <Value>0.00156062841415405</Value>
+                    <Value>0.00920802354812622</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x66, 0x47, </Data>
+                    <Data>0x00, 0x02, 0x5B, 0x75, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi2B0_1</Name>
                     <Type>Int32</Type>
                     <Address>66</Address>
-                    <Value>0.000780344009399414</Value>
+                    <Value>0.00460398197174072</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x33, 0x24, </Data>
+                    <Data>0x00, 0x01, 0x2D, 0xBA, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi2A2_1</Name>
                     <Type>Int32</Type>
                     <Address>67</Address>
-                    <Value>-0.922565877437592</Value>
+                    <Value>-0.817512392997742</Value>
                     <Size>4</Size>
-                    <Data>0xFF, 0x13, 0xD2, 0xB9, </Data>
+                    <Data>0xFF, 0x2E, 0xB7, 0x82, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi2A1_1</Name>
                     <Type>Int32</Type>
                     <Address>68</Address>
-                    <Value>1.91944456100464</Value>
+                    <Value>1.79909640550613</Value>
                     <Size>4</Size>
-                    <Data>0x01, 0xEB, 0x60, 0xB8, </Data>
+                    <Data>0x01, 0xCC, 0x91, 0x95, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi2B2_2</Name>
                     <Type>Int32</Type>
                     <Address>69</Address>
-                    <Value>0.000780344009399414</Value>
+                    <Value>0.00460398197174072</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x33, 0x24, </Data>
+                    <Data>0x00, 0x01, 0x2D, 0xBA, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi2B1_2</Name>
                     <Type>Int32</Type>
                     <Address>70</Address>
-                    <Value>0.00156062841415405</Value>
+                    <Value>0.00920802354812622</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x66, 0x47, </Data>
+                    <Data>0x00, 0x02, 0x5B, 0x75, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi2B0_2</Name>
                     <Type>Int32</Type>
                     <Address>71</Address>
-                    <Value>0.000780344009399414</Value>
+                    <Value>0.00460398197174072</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x33, 0x24, </Data>
+                    <Data>0x00, 0x01, 0x2D, 0xBA, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi2A2_2</Name>
                     <Type>Int32</Type>
                     <Address>72</Address>
-                    <Value>-0.922565877437592</Value>
+                    <Value>-0.817512392997742</Value>
                     <Size>4</Size>
-                    <Data>0xFF, 0x13, 0xD2, 0xB9, </Data>
+                    <Data>0xFF, 0x2E, 0xB7, 0x82, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi2A1_2</Name>
                     <Type>Int32</Type>
                     <Address>73</Address>
-                    <Value>1.91944456100464</Value>
+                    <Value>1.79909640550613</Value>
                     <Size>4</Size>
-                    <Data>0x01, 0xEB, 0x60, 0xB8, </Data>
+                    <Data>0x01, 0xCC, 0x91, 0x95, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi2B2_3</Name>
                     <Type>Int32</Type>
                     <Address>74</Address>
-                    <Value>0.000780344009399414</Value>
+                    <Value>0.00460398197174072</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x33, 0x24, </Data>
+                    <Data>0x00, 0x01, 0x2D, 0xBA, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi2B1_3</Name>
                     <Type>Int32</Type>
                     <Address>75</Address>
-                    <Value>0.00156062841415405</Value>
+                    <Value>0.00920802354812622</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x66, 0x47, </Data>
+                    <Data>0x00, 0x02, 0x5B, 0x75, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi2B0_3</Name>
                     <Type>Int32</Type>
                     <Address>76</Address>
-                    <Value>0.000780344009399414</Value>
+                    <Value>0.00460398197174072</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x33, 0x24, </Data>
+                    <Data>0x00, 0x01, 0x2D, 0xBA, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi2A2_3</Name>
                     <Type>Int32</Type>
                     <Address>77</Address>
-                    <Value>-0.922565877437592</Value>
+                    <Value>-0.817512392997742</Value>
                     <Size>4</Size>
-                    <Data>0xFF, 0x13, 0xD2, 0xB9, </Data>
+                    <Data>0xFF, 0x2E, 0xB7, 0x82, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi2A1_3</Name>
                     <Type>Int32</Type>
                     <Address>78</Address>
-                    <Value>1.91944456100464</Value>
+                    <Value>1.79909640550613</Value>
                     <Size>4</Size>
-                    <Data>0x01, 0xEB, 0x60, 0xB8, </Data>
+                    <Data>0x01, 0xCC, 0x91, 0x95, </Data>
                 </ModuleParameter>
             </Algorithm>
         </Module>
@@ -766,126 +766,126 @@
             <CellName>LFEFilter</CellName>
             <Algorithm>
                 <AlgoName>ALG0</AlgoName>
-                <Description>Multi-Channel - Double Precision( 1 ) : Gain12[ 0 ],Frequency12[ 120 ],Type2[ 5 ];</Description>
+                <Description>Multi-Channel - Double Precision( 1 ) : Gain12[ 0 ],Frequency12[ 160 ],Type2[ 5 ];</Description>
                 <ModuleParameter>
                     <Name>EQS300Multi3B2_1</Name>
                     <Type>Int32</Type>
                     <Address>34</Address>
-                    <Value>7.2181224822998E-05</Value>
+                    <Value>0.000127851963043213</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x04, 0xBB, </Data>
+                    <Data>0x00, 0x00, 0x08, 0x61, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi3B1_1</Name>
                     <Type>Int32</Type>
                     <Address>35</Address>
-                    <Value>0.000144422054290771</Value>
+                    <Value>0.000255703926086426</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x09, 0x77, </Data>
+                    <Data>0x00, 0x00, 0x10, 0xC2, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi3B0_1</Name>
                     <Type>Int32</Type>
                     <Address>36</Address>
-                    <Value>7.2181224822998E-05</Value>
+                    <Value>0.000127851963043213</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x04, 0xBB, </Data>
+                    <Data>0x00, 0x00, 0x08, 0x61, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi3A2_1</Name>
                     <Type>Int32</Type>
                     <Address>37</Address>
-                    <Value>-0.976110994815826</Value>
+                    <Value>-0.968275547027588</Value>
                     <Size>4</Size>
-                    <Data>0xFF, 0x06, 0x1D, 0x97, </Data>
+                    <Data>0xFF, 0x08, 0x1F, 0x18, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi3A1_1</Name>
                     <Type>Int32</Type>
                     <Address>38</Address>
-                    <Value>1.97582221031189</Value>
+                    <Value>1.96776413917542</Value>
                     <Size>4</Size>
-                    <Data>0x01, 0xF9, 0xCF, 0x7C, </Data>
+                    <Data>0x01, 0xF7, 0xBF, 0x64, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi3B2_2</Name>
                     <Type>Int32</Type>
                     <Address>39</Address>
-                    <Value>7.2181224822998E-05</Value>
+                    <Value>0.000127851963043213</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x04, 0xBB, </Data>
+                    <Data>0x00, 0x00, 0x08, 0x61, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi3B1_2</Name>
                     <Type>Int32</Type>
                     <Address>40</Address>
-                    <Value>0.000144422054290771</Value>
+                    <Value>0.000255703926086426</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x09, 0x77, </Data>
+                    <Data>0x00, 0x00, 0x10, 0xC2, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi3B0_2</Name>
                     <Type>Int32</Type>
                     <Address>41</Address>
-                    <Value>7.2181224822998E-05</Value>
+                    <Value>0.000127851963043213</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x04, 0xBB, </Data>
+                    <Data>0x00, 0x00, 0x08, 0x61, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi3A2_2</Name>
                     <Type>Int32</Type>
                     <Address>42</Address>
-                    <Value>-0.976110994815826</Value>
+                    <Value>-0.968275547027588</Value>
                     <Size>4</Size>
-                    <Data>0xFF, 0x06, 0x1D, 0x97, </Data>
+                    <Data>0xFF, 0x08, 0x1F, 0x18, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi3A1_2</Name>
                     <Type>Int32</Type>
                     <Address>43</Address>
-                    <Value>1.97582221031189</Value>
+                    <Value>1.96776413917542</Value>
                     <Size>4</Size>
-                    <Data>0x01, 0xF9, 0xCF, 0x7C, </Data>
+                    <Data>0x01, 0xF7, 0xBF, 0x64, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi3B2_3</Name>
                     <Type>Int32</Type>
                     <Address>44</Address>
-                    <Value>7.2181224822998E-05</Value>
+                    <Value>0.000127851963043213</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x04, 0xBB, </Data>
+                    <Data>0x00, 0x00, 0x08, 0x61, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi3B1_3</Name>
                     <Type>Int32</Type>
                     <Address>45</Address>
-                    <Value>0.000144422054290771</Value>
+                    <Value>0.000255703926086426</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x09, 0x77, </Data>
+                    <Data>0x00, 0x00, 0x10, 0xC2, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi3B0_3</Name>
                     <Type>Int32</Type>
                     <Address>46</Address>
-                    <Value>7.2181224822998E-05</Value>
+                    <Value>0.000127851963043213</Value>
                     <Size>4</Size>
-                    <Data>0x00, 0x00, 0x04, 0xBB, </Data>
+                    <Data>0x00, 0x00, 0x08, 0x61, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi3A2_3</Name>
                     <Type>Int32</Type>
                     <Address>47</Address>
-                    <Value>-0.976110994815826</Value>
+                    <Value>-0.968275547027588</Value>
                     <Size>4</Size>
-                    <Data>0xFF, 0x06, 0x1D, 0x97, </Data>
+                    <Data>0xFF, 0x08, 0x1F, 0x18, </Data>
                 </ModuleParameter>
                 <ModuleParameter>
                     <Name>EQS300Multi3A1_3</Name>
                     <Type>Int32</Type>
                     <Address>48</Address>
-                    <Value>1.97582221031189</Value>
+                    <Value>1.96776413917542</Value>
                     <Size>4</Size>
-                    <Data>0x01, 0xF9, 0xCF, 0x7C, </Data>
+                    <Data>0x01, 0xF7, 0xBF, 0x64, </Data>
                 </ModuleParameter>
             </Algorithm>
         </Module>
