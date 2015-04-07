@@ -4,7 +4,7 @@
 #if defined (JUCER_XCODE_MAC_F6D2F4CF)
  #include "../../../../../Downloads/JUCE-OSX/modules/juce_data_structures/juce_data_structures.h"
 #elif defined (JUCER_LINUX_MAKE_7346DA2A)
- #include "../../../../../../JUCE/modules/juce_data_structures/juce_data_structures.h"
+ #include "/home/pi/JUCE/modules/juce_data_structures/juce_data_structures.h"
 #else
  #error "This file is designed to be used in an Introjucer-generated project!"
 #endif
