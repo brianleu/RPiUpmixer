@@ -217,8 +217,10 @@ void UpmixerComponents::sliderValueChanged (Slider* sliderThatWasMoved)
     }
     else if (sliderThatWasMoved == delaySlider)
     {
+	ADI_REG_TYPE writeData[4] = {0};
         delaySlidervalue = delaySlider->getValue();
-        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDDELAY_DELAYAMT_ADDR, 4, SIGMASTUDIOTYPE_INTEGER_CONVERT(round(delaySlidervalue*fs/100)));
+	SIGMA_USER_TO_INTEGER_CONVERT(round(delaySlidervalue*fs/1000), writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDDELAY_DELAYAMT_ADDR, 4, writeData);
     }
     
     
@@ -232,14 +234,16 @@ void UpmixerComponents::comboBoxChanged (ComboBox* comboBoxThatHasChanged)
     {
         comboItem = sourceComboBox->getText();
         
+	ADI_REG_TYPE selectMono[4] = {0x00, 0x00, 0x00, 0x02};
+	ADI_REG_TYPE selectStereo[4] = {0x00, 0x00, 0x00, 0x00}; 
         if (comboItem == "Mono")
         {
-            SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDGAIN_GAINALGNS145X8GAIN_ADDR, 4, 0x0002);
+            SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SOURCESELECT_STEREOMUXSIGMA300NS1INDEX_ADDR, 4, selectMono);
 
         }
         else if (comboItem == "Stereo")
         {
-            SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDGAIN_GAINALGNS145X8GAIN_ADDR, 4, 0x0000);
+            SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SOURCESELECT_STEREOMUXSIGMA300NS1INDEX_ADDR, 4, selectStereo);
 
         }
         else if (comboItem == "5.1")
