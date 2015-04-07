@@ -22,6 +22,7 @@
 
 //[Headers]     -- You can add your own extra header files here --
 #include "JuceHeader.h"
+#include "Helicopter.h"
 //[/Headers]
 
 
@@ -60,11 +61,10 @@ public:
     static const char* slide1_png4;
     static const int slide1_png4Size;
     
-    bool dopplerMode;
-    bool userInputMode;
-    bool sourceMode;
-    bool encoderMode;
     bool decoderMode;
+    bool userInputMode;
+    bool manualSourceMode;
+    bool sourceRotationMode;
     
     double FLslidervalue;
     double FRslidervalue;
