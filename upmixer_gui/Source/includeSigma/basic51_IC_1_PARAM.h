@@ -197,7 +197,7 @@
 #define MOD_MGAIN_COUNT                                1
 #define MOD_MGAIN_DEVICE                               "IC1"
 #define MOD_MGAIN_GAINALGNS145X1GAIN_ADDR              79
-#define MOD_MGAIN_GAINALGNS145X1GAIN_VALUE             SIGMASTUDIOTYPE_8_24_CONVERT(3)
+#define MOD_MGAIN_GAINALGNS145X1GAIN_VALUE             SIGMASTUDIOTYPE_8_24_CONVERT(10)
 #define MOD_MGAIN_GAINALGNS145X1GAIN_TYPE              SIGMASTUDIOTYPE_8_24
 
 /* Module SourceSelect - Stereo Switch Nx2*/
