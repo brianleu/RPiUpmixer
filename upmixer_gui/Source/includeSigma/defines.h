@@ -1,7 +1,7 @@
 /*
  * File:           defines.h
  *
- * Created:        Saturday, April 04, 2015 5:32:18 PM
+ * Created:        Tuesday, April 07, 2015 11:55:37 AM
  * Description:    basic51 IC default download data definitions.
  *
  * This software is distributed in the hope that it will be useful,
@@ -19,7 +19,7 @@
 #ifndef __DEFINES_H__
 #define __DEFINES_H__
 
-#define BufferSize_IC_1     	1578
+#define BufferSize_IC_1     	1626
 #define NumTransactions_IC_1	58
 
 

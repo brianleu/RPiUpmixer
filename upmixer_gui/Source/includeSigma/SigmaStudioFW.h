@@ -30,7 +30,7 @@
 
 
 //Change the value below based on the PROGRAM_SIZE_IC_1 value in the *_IC_1.h file!!!!
-#define array_size 968
+#define array_size 1012
 
 
 

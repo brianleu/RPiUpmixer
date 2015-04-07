@@ -176,26 +176,32 @@ void UpmixerComponents::sliderValueChanged (Slider* sliderThatWasMoved)
     if (sliderThatWasMoved == RRslider)
     {
         RRslidervalue = RRslider->getValue();
+        SIGMA_WRITE_LINEAR_GAIN(DEVICE_ADDR_IC_1, MOD_OUTPUTMIXER_ALG6_GAINALGNS145X6GAIN_ADDR, RRslidervalue);
     }
     else if (sliderThatWasMoved == RLslider)
     {
         RLslidervalue = RLslider->getValue();
+        SIGMA_WRITE_LINEAR_GAIN(DEVICE_ADDR_IC_1, MOD_OUTPUTMIXER_ALG5_GAINALGNS145X5GAIN_ADDR, RLslidervalue);
     }
     else if (sliderThatWasMoved == LFEslider)
     {
         LFEslidervalue = LFEslider->getValue();
+        SIGMA_WRITE_LINEAR_GAIN(DEVICE_ADDR_IC_1, MOD_OUTPUTMIXER_ALG4_GAINALGNS145X4GAIN_ADDR, LFEslidervalue);
     }
     else if (sliderThatWasMoved == Cslider)
     {
         Cslidervalue = Cslider->getValue();
+        SIGMA_WRITE_LINEAR_GAIN(DEVICE_ADDR_IC_1, MOD_OUTPUTMIXER_ALG3_GAINALGNS145X3GAIN_ADDR, Cslidervalue);
     }
     else if (sliderThatWasMoved == FLslider)
     {
         FLslidervalue = FLslider->getValue();
+        SIGMA_WRITE_LINEAR_GAIN(DEVICE_ADDR_IC_1, MOD_OUTPUTMIXER_ALG1_GAINALGNS145X1GAIN_ADDR, FLslidervalue);
     }
     else if (sliderThatWasMoved == FRslider)
     {
         FRslidervalue = FRslider->getValue();
+        SIGMA_WRITE_LINEAR_GAIN(DEVICE_ADDR_IC_1, MOD_OUTPUTMIXER_ALG2_GAINALGNS145X2GAIN_ADDR, FRslidervalue);
     }
     else if (sliderThatWasMoved == cutoffSliderLFE)
     {
@@ -212,18 +218,7 @@ void UpmixerComponents::sliderValueChanged (Slider* sliderThatWasMoved)
     else if (sliderThatWasMoved == delaySlider)
     {
         delaySlidervalue = delaySlider->getValue();
-    }
-    
-    // Write Gain Values to SIGMA
-    SIGMA_WRITE_LINEAR_GAIN(DEVICE_ADDR_IC_1, MOD_OUTPUTMIXER_ALG1_GAINALGNS145X1GAIN_ADDR, FLslidervalue);
-    SIGMA_WRITE_LINEAR_GAIN(DEVICE_ADDR_IC_1, MOD_OUTPUTMIXER_ALG2_GAINALGNS145X2GAIN_ADDR, FRslidervalue);
-    SIGMA_WRITE_LINEAR_GAIN(DEVICE_ADDR_IC_1, MOD_OUTPUTMIXER_ALG3_GAINALGNS145X3GAIN_ADDR, Cslidervalue);
-    SIGMA_WRITE_LINEAR_GAIN(DEVICE_ADDR_IC_1, MOD_OUTPUTMIXER_ALG4_GAINALGNS145X4GAIN_ADDR, LFEslidervalue);
-    SIGMA_WRITE_LINEAR_GAIN(DEVICE_ADDR_IC_1, MOD_OUTPUTMIXER_ALG5_GAINALGNS145X5GAIN_ADDR, RLslidervalue);
-    SIGMA_WRITE_LINEAR_GAIN(DEVICE_ADDR_IC_1, MOD_OUTPUTMIXER_ALG6_GAINALGNS145X6GAIN_ADDR, RRslidervalue);
-    
-    //.....
-        
+        SIGMA_WRITE_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDDELAY_DELAYAMT_VALUE, 4, SIGMASTUDIOTYPE_INTEGER_CONVERT(round(delaySlidervalue*fs/100)));
     }
     
     
@@ -239,11 +234,13 @@ void UpmixerComponents::comboBoxChanged (ComboBox* comboBoxThatHasChanged)
         
         if (comboItem == "Mono")
         {
-            
+            SIGMA_WRITE_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDGAIN_GAINALGNS145X8GAIN_VALUE, 4, 0x0002);
+
         }
         else if (comboItem == "Stereo")
         {
-            
+            SIGMA_WRITE_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDGAIN_GAINALGNS145X8GAIN_VALUE, 4, 0x0000);
+
         }
         else if (comboItem == "5.1")
         {
