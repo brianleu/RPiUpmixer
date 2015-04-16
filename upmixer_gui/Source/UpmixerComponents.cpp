@@ -39,7 +39,7 @@ UpmixerComponents::UpmixerComponents ()
     RLslider->addListener (this);
     
     addAndMakeVisible (LFEslider = new Slider ("new slider"));
-    LFEslider->setRange (0, 0.5, 0.01);
+    LFEslider->setRange (0, 0.5, );
     LFEslider->setSliderStyle (Slider::LinearVertical);
     LFEslider->setTextBoxStyle (Slider::NoTextBox, false, 80, 20);
     LFEslider->addListener (this);
