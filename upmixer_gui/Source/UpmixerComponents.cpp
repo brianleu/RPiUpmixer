@@ -104,7 +104,6 @@ UpmixerComponents::UpmixerComponents ()
     sourceComboBox->setTextWhenNoChoicesAvailable (TRANS("Stereo"));
     sourceComboBox->addItem (TRANS("Mono"), 1);
     sourceComboBox->addItem (TRANS("Stereo"), 2);
-    sourceComboBox->addItem (TRANS("5.1"), 3);
     sourceComboBox->addListener (this);
     
     addAndMakeVisible (modeComboBox = new ComboBox ("new combo box"));
@@ -112,11 +111,10 @@ UpmixerComponents::UpmixerComponents ()
     modeComboBox->setJustificationType (Justification::centredLeft);
     modeComboBox->setTextWhenNothingSelected (TRANS("User Input"));
     modeComboBox->setTextWhenNoChoicesAvailable (TRANS("User Input"));
-    modeComboBox->addItem (TRANS("Encoder"), 1);
-    modeComboBox->addItem (TRANS("Decoder"), 2);
-    modeComboBox->addItem (TRANS("User Input"), 3);
-    modeComboBox->addItem (TRANS("Source Control"), 4);
-    modeComboBox->addItem (TRANS("Doppler Effect"), 5);
+    modeComboBox->addItem (TRANS("Decoder"), 1);
+    modeComboBox->addItem (TRANS("User Input"), 2);
+    modeComboBox->addItem (TRANS("Manual Source Adjustment"), 3);
+    modeComboBox->addItem (TRANS("Sound Source Rotation"), 4);
     modeComboBox->addListener (this);
     
     cachedImage_slide1_png4 = ImageCache::getFromMemory (slide1_png4, slide1_png4Size);
@@ -246,21 +244,12 @@ void UpmixerComponents::comboBoxChanged (ComboBox* comboBoxThatHasChanged)
             SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SOURCESELECT_STEREOMUXSIGMA300NS1INDEX_ADDR, 4, selectStereo);
 
         }
-        else if (comboItem == "5.1")
-        {
-            
-        }
-        
     }
     else if (comboBoxThatHasChanged == modeComboBox)
     {
         comboItem = modeComboBox->getText();
         
-        if (comboItem == "Encoder")
-        {
-            encoderMode = true;
-        }
-        else if (comboItem == "Decoder")
+        if (comboItem == "Decoder")
         {
             decoderMode = true;
         }
@@ -268,14 +257,35 @@ void UpmixerComponents::comboBoxChanged (ComboBox* comboBoxThatHasChanged)
         {
             userInputMode = true;
         }
-        else if (comboItem == "Source Control")
+        else if (comboItem == "Manual Source Adjustment")
         {
-            sourceMode = true;
+            manualSourceMode = true;
             LFEslider->setValue(0.25);
         }
-        else if (comboItem == "Doppler Effect")
+        else if (comboItem == "Sound Source Rotation")
         {
-            dopplerMode = true;
+            sourceRotationMode = true;
+            double gain;
+            
+            // Update the sliders with gain values for the sound source rotation
+            // Values are stored in Helicopter.h
+            for (int i = 0; i < 882000; i++)
+            {
+                gain = FL_channel[i];
+                FLslider->setValue(gain);
+                
+                gain = FR_channel[i];
+                FRslider->setValue(gain);
+                
+                gain = C_channel[i];
+                Cslider->setValue(gain);
+                
+                gain = RL_channel[i];
+                RLslider->setValue(gain);
+                
+                gain = RR_channel[i];
+                RRslider->setValue(gain);
+            }
         }
     }
 }
