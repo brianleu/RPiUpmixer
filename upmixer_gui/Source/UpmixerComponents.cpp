@@ -292,14 +292,14 @@ void UpmixerComponents::comboBoxChanged (ComboBox* comboBoxThatHasChanged)
 
 void UpmixerComponents::mouseDrag (const MouseEvent& event)
 {
-    if (sourceMode){
+    if (manualSourceMode){
         handleMouse (event);
     }
 }
 
 void UpmixerComponents::handleMouse (const MouseEvent& event)
 {
-    if (sourceMode){
+    if (manualSourceMode){
         
         x = event.x;
         y = event.y;
