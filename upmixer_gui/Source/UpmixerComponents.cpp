@@ -92,7 +92,7 @@ UpmixerComponents::UpmixerComponents ()
     cutoffSliderC->setValue(4);
     
     addAndMakeVisible (delaySlider = new Slider ("new slider"));
-    delaySlider->setRange (0, 1000, 1);
+    delaySlider->setRange (0, 100, 1);
     delaySlider->setSliderStyle (Slider::LinearHorizontal);
     delaySlider->setTextBoxStyle (Slider::TextBoxBelow, false, 80, 20);
     delaySlider->addListener (this);
