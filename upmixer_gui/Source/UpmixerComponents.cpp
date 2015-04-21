@@ -104,6 +104,7 @@ UpmixerComponents::UpmixerComponents ()
     sourceComboBox->setTextWhenNoChoicesAvailable (TRANS("Stereo"));
     sourceComboBox->addItem (TRANS("Mono"), 1);
     sourceComboBox->addItem (TRANS("Stereo"), 2);
+    sourceComboBox->addItem (TRANS("Karaoke"), 3);
     sourceComboBox->addListener (this);
     
     addAndMakeVisible (modeComboBox = new ComboBox ("new combo box"));
@@ -204,20 +205,86 @@ void UpmixerComponents::sliderValueChanged (Slider* sliderThatWasMoved)
     else if (sliderThatWasMoved == cutoffSliderLFE)
     {
         LFECutoffvalue = cutoffSliderLFE->getValue();
+        IIRCoefficients coeffs (IIRCoefficients::makeLowPass(fs, LFECutoffvalue);
+        ADI_REG_TYPE writeData[4] = {0};
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[0], writeData )
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE0_B0_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE1_B0_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE2_B0_ADDR, 4, writeData);
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[1], writeData )
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE0_B1_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE1_B1_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE2_B1_ADDR, 4, writeData);
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[2], writeData )
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE0_B2_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE1_B2_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE2_B2_ADDR, 4, writeData);
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[3], writeData )
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE0_A1_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE1_A1_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE2_A1_ADDR, 4, writeData);
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[4], writeData )
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE0_A2_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE1_A2_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE2_A2_ADDR, 4, writeData);
     }
     else if (sliderThatWasMoved == cutoffSliderSurround)
     {
         surroundCutoffvalue = cutoffSliderSurround->getValue();
+        IIRCoefficients coeffs (IIRCoefficients::makeLowPass(fs, surroundCutoffvalue);
+        ADI_REG_TYPE writeData[4] = {0};
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[0], writeData )
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE0_B0_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE1_B0_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE2_B0_ADDR, 4, writeData);
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[1], writeData )
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE0_B1_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE1_B1_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE2_B1_ADDR, 4, writeData);
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[2], writeData )
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE0_B2_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE1_B2_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE2_B2_ADDR, 4, writeData);
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[3], writeData )
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE0_A1_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE1_A1_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE2_A1_ADDR, 4, writeData);
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[4], writeData )
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE0_A2_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE1_A2_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE2_A2_ADDR, 4, writeData);
     }
     else if (sliderThatWasMoved == cutoffSliderC)
     {
         centerCutoffvalue = cutoffSliderC->getValue();
+        IIRCoefficients coeffs (IIRCoefficients::makeLowPass(fs, centerCutoffvalue);
+        ADI_REG_TYPE writeData[4] = {0};
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[0], writeData )
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE0_B0_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE1_B0_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE2_B0_ADDR, 4, writeData);
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[1], writeData )
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE0_B1_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE1_B1_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE2_B1_ADDR, 4, writeData);
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[2], writeData )
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE0_B2_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE1_B2_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE2_B2_ADDR, 4, writeData);
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[3], writeData )
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE0_A1_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE1_A1_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE2_A1_ADDR, 4, writeData);
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[4], writeData )
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE0_A2_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE1_A2_ADDR, 4, writeData);
+        SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE2_A2_ADDR, 4, writeData);
     }
     else if (sliderThatWasMoved == delaySlider)
     {
-	ADI_REG_TYPE writeData[4] = {0};
+	    ADI_REG_TYPE writeData[4] = {0};
         delaySlidervalue = delaySlider->getValue();
-	SIGMA_USER_TO_INTEGER_CONVERT(round(delaySlidervalue*fs/1000), writeData);
+	    SIGMA_USER_TO_INTEGER_CONVERT(round(delaySlidervalue*fs/1000), writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDDELAY_DELAYAMT_ADDR, 4, writeData);
     }
     
@@ -232,8 +299,9 @@ void UpmixerComponents::comboBoxChanged (ComboBox* comboBoxThatHasChanged)
     {
         comboItem = sourceComboBox->getText();
         
-	ADI_REG_TYPE selectMono[4] = {0x00, 0x00, 0x00, 0x02};
-	ADI_REG_TYPE selectStereo[4] = {0x00, 0x00, 0x00, 0x00}; 
+        ADI_REG_TYPE selectBoth[4] = {0x00, 0x00, 0x00, 0x04};
+        ADI_REG_TYPE selectMono[4] = {0x00, 0x00, 0x00, 0x02};
+	    ADI_REG_TYPE selectStereo[4] = {0x00, 0x00, 0x00, 0x00}; 
         if (comboItem == "Mono")
         {
             SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SOURCESELECT_STEREOMUXSIGMA300NS1INDEX_ADDR, 4, selectMono);
@@ -244,27 +312,43 @@ void UpmixerComponents::comboBoxChanged (ComboBox* comboBoxThatHasChanged)
             SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SOURCESELECT_STEREOMUXSIGMA300NS1INDEX_ADDR, 4, selectStereo);
 
         }
+        else if (comboItem == "Karaoke")
+        {
+            SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SOURCESELECT_STEREOMUXSIGMA300NS1INDEX_ADDR, 4, selectBoth);
+
+        }
     }
     else if (comboBoxThatHasChanged == modeComboBox)
     {
         comboItem = modeComboBox->getText();
+
+        ADI_REG_TYPE volOff[4] = {0x00, 0x00, 0x00, 0x00};
+        ADI_REG_TYPE volOn[4] = {0x01, 0x00, 0x00, 0x00}; 
         
         if (comboItem == "Decoder")
         {
             decoderMode = true;
+            SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_2XN_1_ALG0_STEREODEMUXSIGMA300NS1VOL0_ADDR, 4, volOn);
+            SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_2XN_1_ALG0_STEREODEMUXSIGMA300NS1VOL1_ADDR, 4, volOff);
         }
         else if (comboItem == "User Input")
         {
             userInputMode = true;
+            SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_2XN_1_ALG0_STEREODEMUXSIGMA300NS1VOL0_ADDR, 4, volOn);
+            SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_2XN_1_ALG0_STEREODEMUXSIGMA300NS1VOL1_ADDR, 4, volOff);
         }
         else if (comboItem == "Manual Source Adjustment")
         {
             manualSourceMode = true;
             LFEslider->setValue(0.25);
+            SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_2XN_1_ALG0_STEREODEMUXSIGMA300NS1VOL0_ADDR, 4, volOn);
+            SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_2XN_1_ALG0_STEREODEMUXSIGMA300NS1VOL1_ADDR, 4, volOff);
         }
         else if (comboItem == "Sound Source Rotation")
         {
             sourceRotationMode = true;
+            SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_2XN_1_ALG0_STEREODEMUXSIGMA300NS1VOL0_ADDR, 4, volOff);
+            SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_2XN_1_ALG0_STEREODEMUXSIGMA300NS1VOL1_ADDR, 4, volOn);
             double gain;
             
             // Update the sliders with gain values for the sound source rotation
