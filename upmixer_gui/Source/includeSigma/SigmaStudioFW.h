@@ -44,7 +44,7 @@ int Tx_Idx, Rx_Idx;
 int NextBufferEnd, ThisBufferSize;
 unsigned char I2C1_Buffer_Tx[array_size];
 unsigned char recvData[4] = {0};
-double max = 8388608;
+double max = 16777216;
 double fs = 44100; // fs=48kHz (used in converting frequency to and from 4 byte ADI_REG_TYPE)
 double conversion, fraction;
 double mask = 0x0FFFFFFF;
