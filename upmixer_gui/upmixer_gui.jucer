@@ -27,6 +27,7 @@
         <MODULEPATH id="juce_data_structures" path="../../Downloads/JUCE-OSX/modules"/>
         <MODULEPATH id="juce_gui_basics" path="../../Downloads/JUCE-OSX/modules"/>
         <MODULEPATH id="juce_gui_extra" path="../../Downloads/JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../Downloads/JUCE-OSX/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
     <LINUX_MAKE targetFolder="Builds/Linux" extraDefs="JUCE_USE_XSHM=0 JUCE_USE_XINERAMA=0">
@@ -37,16 +38,35 @@
                        targetName="upmixer_gui"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_core" path="../../../JUCE/modules"/>
-        <MODULEPATH id="juce_events" path="../../../JUCE/modules"/>
-        <MODULEPATH id="juce_graphics" path="../../../JUCE/modules"/>
-        <MODULEPATH id="juce_data_structures" path="../../../JUCE/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="../../../JUCE/modules"/>
-        <MODULEPATH id="juce_gui_extra" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="/home/pi/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="/home/pi/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="/home/pi/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="/home/pi/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="/home/pi/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="/home/pi/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="/home/pi/JUCE/modules"/>
       </MODULEPATHS>
     </LINUX_MAKE>
+    <VS2013 targetFolder="Builds/VisualStudio2013">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="1" optimisation="1" targetName="upmixer_gui"/>
+        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="0" optimisation="3" targetName="upmixer_gui"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_gui_extra" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="C:/JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2013>
   </EXPORTFORMATS>
   <MODULES>
+    <MODULES id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
     <MODULES id="juce_core" showAllCode="1" useLocalCopy="0"/>
     <MODULES id="juce_data_structures" showAllCode="1" useLocalCopy="0"/>
     <MODULES id="juce_events" showAllCode="1" useLocalCopy="0"/>

@@ -5,6 +5,8 @@
  #include "../../../../../Downloads/JUCE-OSX/modules/juce_data_structures/juce_data_structures.h"
 #elif defined (JUCER_LINUX_MAKE_7346DA2A)
  #include "/home/pi/JUCE/modules/juce_data_structures/juce_data_structures.h"
+#elif defined (JUCER_VS2013_78A5020)
+ #include "C:/JUCE/modules/juce_data_structures/juce_data_structures.h"
 #else
  #error "This file is designed to be used in an Introjucer-generated project!"
 #endif

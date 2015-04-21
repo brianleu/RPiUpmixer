@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2013
+Project("{FD96FC3C-764F-A8A1-23CF-3B2ECEB58DD5}") = "upmixer_gui", "upmixer_gui.vcxproj", "{238E636D-2896-A549-DC6F-78B19BD59E16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{238E636D-2896-A549-DC6F-78B19BD59E16}.Debug|Win32.ActiveCfg = Debug|Win32
+		{238E636D-2896-A549-DC6F-78B19BD59E16}.Debug|Win32.Build.0 = Debug|Win32
+		{238E636D-2896-A549-DC6F-78B19BD59E16}.Release|Win32.ActiveCfg = Release|Win32
+		{238E636D-2896-A549-DC6F-78B19BD59E16}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
