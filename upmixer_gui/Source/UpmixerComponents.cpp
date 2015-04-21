@@ -23,6 +23,9 @@
 #include "includeSigma/basic51_IC_1.h"
 #include "includeSigma/basic51_IC_1_PARAM.h"
 
+#include "Helicopter.h"
+
+
 //==============================================================================
 UpmixerComponents::UpmixerComponents ()
 {
@@ -39,7 +42,7 @@ UpmixerComponents::UpmixerComponents ()
     RLslider->addListener (this);
     
     addAndMakeVisible (LFEslider = new Slider ("new slider"));
-    LFEslider->setRange (0, 0.5, );
+    LFEslider->setRange (0, 0.5, 0.01);
     LFEslider->setSliderStyle (Slider::LinearVertical);
     LFEslider->setTextBoxStyle (Slider::NoTextBox, false, 80, 20);
     LFEslider->addListener (this);
@@ -71,25 +74,25 @@ UpmixerComponents::UpmixerComponents ()
     modeLabel->setColour (TextEditor::backgroundColourId, Colour (0x00000000));
     
     addAndMakeVisible (cutoffSliderLFE = new Slider ("new slider"));
-    cutoffSliderLFE->setRange (0, 0.4, 0.01);
+    cutoffSliderLFE->setRange (0, 400, 1);
     cutoffSliderLFE->setSliderStyle (Slider::LinearVertical);
     cutoffSliderLFE->setTextBoxStyle (Slider::TextBoxBelow, false, 80, 20);
     cutoffSliderLFE->addListener (this);
-    cutoffSliderLFE->setValue(0.3);
+    cutoffSliderLFE->setValue(200);
     
     addAndMakeVisible (cutoffSliderSurround = new Slider ("new slider"));
-    cutoffSliderSurround->setRange (0, 6, 0.1);
+    cutoffSliderSurround->setRange (0, 7000, 1);
     cutoffSliderSurround->setSliderStyle (Slider::LinearVertical);
     cutoffSliderSurround->setTextBoxStyle (Slider::TextBoxBelow, false, 80, 20);
     cutoffSliderSurround->addListener (this);
-    cutoffSliderSurround->setValue(4);
+    cutoffSliderSurround->setValue(7000);
     
     addAndMakeVisible (cutoffSliderC = new Slider ("new slider"));
-    cutoffSliderC->setRange (0, 6, 0.1);
+    cutoffSliderC->setRange (0, 7000, 1);
     cutoffSliderC->setSliderStyle (Slider::LinearVertical);
     cutoffSliderC->setTextBoxStyle (Slider::TextBoxBelow, false, 80, 20);
     cutoffSliderC->addListener (this);
-    cutoffSliderC->setValue(4);
+    cutoffSliderC->setValue(7000);
     
     addAndMakeVisible (delaySlider = new Slider ("new slider"));
     delaySlider->setRange (0, 100, 1);
@@ -205,25 +208,25 @@ void UpmixerComponents::sliderValueChanged (Slider* sliderThatWasMoved)
     else if (sliderThatWasMoved == cutoffSliderLFE)
     {
         LFECutoffvalue = cutoffSliderLFE->getValue();
-        IIRCoefficients coeffs (IIRCoefficients::makeLowPass(fs, LFECutoffvalue);
+        IIRCoefficients coeffs (IIRCoefficients::makeLowPass(fs, LFECutoffvalue));
         ADI_REG_TYPE writeData[4] = {0};
-        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[0], writeData )
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs.coefficients[0], writeData );
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE0_B0_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE1_B0_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE2_B0_ADDR, 4, writeData);
-        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[1], writeData )
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs.coefficients[1], writeData );
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE0_B1_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE1_B1_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE2_B1_ADDR, 4, writeData);
-        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[2], writeData )
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs.coefficients[2], writeData );
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE0_B2_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE1_B2_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE2_B2_ADDR, 4, writeData);
-        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[3], writeData )
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs.coefficients[3], writeData );
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE0_A1_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE1_A1_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE2_A1_ADDR, 4, writeData);
-        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[4], writeData )
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs.coefficients[4], writeData );
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE0_A2_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE1_A2_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_LFEFILTER_ALG0_STAGE2_A2_ADDR, 4, writeData);
@@ -231,25 +234,25 @@ void UpmixerComponents::sliderValueChanged (Slider* sliderThatWasMoved)
     else if (sliderThatWasMoved == cutoffSliderSurround)
     {
         surroundCutoffvalue = cutoffSliderSurround->getValue();
-        IIRCoefficients coeffs (IIRCoefficients::makeLowPass(fs, surroundCutoffvalue);
+        IIRCoefficients coeffs (IIRCoefficients::makeLowPass(fs, surroundCutoffvalue));
         ADI_REG_TYPE writeData[4] = {0};
-        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[0], writeData )
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs.coefficients[0], writeData );
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE0_B0_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE1_B0_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE2_B0_ADDR, 4, writeData);
-        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[1], writeData )
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs.coefficients[1], writeData );
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE0_B1_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE1_B1_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE2_B1_ADDR, 4, writeData);
-        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[2], writeData )
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs.coefficients[2], writeData );
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE0_B2_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE1_B2_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE2_B2_ADDR, 4, writeData);
-        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[3], writeData )
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs.coefficients[3], writeData );
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE0_A1_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE1_A1_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE2_A1_ADDR, 4, writeData);
-        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[4], writeData )
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs.coefficients[4], writeData );
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE0_A2_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE1_A2_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_SURROUNDFILTER_ALG0_STAGE2_A2_ADDR, 4, writeData);
@@ -257,25 +260,25 @@ void UpmixerComponents::sliderValueChanged (Slider* sliderThatWasMoved)
     else if (sliderThatWasMoved == cutoffSliderC)
     {
         centerCutoffvalue = cutoffSliderC->getValue();
-        IIRCoefficients coeffs (IIRCoefficients::makeLowPass(fs, centerCutoffvalue);
+        IIRCoefficients coeffs (IIRCoefficients::makeLowPass(fs, centerCutoffvalue));
         ADI_REG_TYPE writeData[4] = {0};
-        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[0], writeData )
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs.coefficients[0], writeData );
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE0_B0_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE1_B0_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE2_B0_ADDR, 4, writeData);
-        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[1], writeData )
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs.coefficients[1], writeData );
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE0_B1_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE1_B1_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE2_B1_ADDR, 4, writeData);
-        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[2], writeData )
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs.coefficients[2], writeData );
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE0_B2_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE1_B2_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE2_B2_ADDR, 4, writeData);
-        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[3], writeData )
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs.coefficients[3], writeData );
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE0_A1_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE1_A1_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE2_A1_ADDR, 4, writeData);
-        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs[4], writeData )
+        SIGMA_USER_TO_FIXPOINT_CONVERT( coeffs.coefficients[4], writeData );
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE0_A2_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE1_A2_ADDR, 4, writeData);
         SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_CFILTER_ALG0_STAGE2_A2_ADDR, 4, writeData);

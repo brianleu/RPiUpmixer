@@ -15,10 +15,10 @@ ifeq ($(CONFIG),Debug)
   OUTDIR := build
 
   ifeq ($(TARGET_ARCH),)
-    TARGET_ARCH := -march=native
+    TARGET_ARCH := -march=armv6
   endif
 
-  CPPFLAGS := $(DEPFLAGS) -std=c++11 -D "LINUX=1" -D "DEBUG=1" -D "_DEBUG=1" -D "JUCE_USE_XSHM=0" -D "JUCE_USE_XINERAMA=0" -D "JUCER_LINUX_MAKE_7346DA2A=1" -D "JUCE_APP_VERSION=1.0.0" -D "JUCE_APP_VERSION_HEX=0x10000" -I /usr/include -I /usr/include/freetype2 -I ../../JuceLibraryCode -I /home/pi/JUCE/modules
+  CPPFLAGS := $(DEPFLAGS) -D "LINUX=1" -D "DEBUG=1" -D "_DEBUG=1" -D "JUCE_USE_XSHM=0" -D "JUCE_USE_XINERAMA=0" -D "JUCER_LINUX_MAKE_7346DA2A=1" -D "JUCE_APP_VERSION=1.0.0" -D "JUCE_APP_VERSION_HEX=0x10000" -I /usr/include -I /usr/include/freetype2 -I ../../JuceLibraryCode -I /home/pi/JUCE/modules
   CFLAGS += $(CPPFLAGS) $(TARGET_ARCH) -g -ggdb -O0
   CXXFLAGS += $(CFLAGS)
   LDFLAGS += $(TARGET_ARCH) -L$(BINDIR) -L$(LIBDIR) -L/usr/X11R6/lib/ -lX11 -lXext -lXinerama -ldl -lfreetype -lpthread -lrt 
@@ -86,37 +86,37 @@ $(OBJDIR)/Main_90ebc5c2.o: ../../Source/Main.cpp
 	@echo "Compiling Main.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/juce_audio_basics_bd9a5bfc.o: ../../../../../../../../JUCE/modules/juce_audio_basics/juce_audio_basics.cpp
+$(OBJDIR)/juce_audio_basics_bd9a5bfc.o: /home/pi/JUCE/modules/juce_audio_basics/juce_audio_basics.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling juce_audio_basics.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/juce_core_a2725cde.o: ../../../../../../../../JUCE/modules/juce_core/juce_core.cpp
+$(OBJDIR)/juce_core_a2725cde.o: /home/pi/JUCE/modules/juce_core/juce_core.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling juce_core.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/juce_data_structures_77a9361a.o: ../../../../../../../../JUCE/modules/juce_data_structures/juce_data_structures.cpp
+$(OBJDIR)/juce_data_structures_77a9361a.o: /home/pi/JUCE/modules/juce_data_structures/juce_data_structures.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling juce_data_structures.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/juce_events_53af2a52.o: ../../../../../../../../JUCE/modules/juce_events/juce_events.cpp
+$(OBJDIR)/juce_events_53af2a52.o: /home/pi/JUCE/modules/juce_events/juce_events.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling juce_events.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/juce_graphics_83290b6.o: ../../../../../../../../JUCE/modules/juce_graphics/juce_graphics.cpp
+$(OBJDIR)/juce_graphics_83290b6.o: /home/pi/JUCE/modules/juce_graphics/juce_graphics.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling juce_graphics.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/juce_gui_basics_93f2ad32.o: ../../../../../../../../JUCE/modules/juce_gui_basics/juce_gui_basics.cpp
+$(OBJDIR)/juce_gui_basics_93f2ad32.o: /home/pi/JUCE/modules/juce_gui_basics/juce_gui_basics.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling juce_gui_basics.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/juce_gui_extra_e922833a.o: ../../../../../../../../JUCE/modules/juce_gui_extra/juce_gui_extra.cpp
+$(OBJDIR)/juce_gui_extra_e922833a.o: /home/pi/JUCE/modules/juce_gui_extra/juce_gui_extra.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling juce_gui_extra.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"

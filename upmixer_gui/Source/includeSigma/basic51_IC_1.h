@@ -23,7 +23,7 @@
 #include "basic51_IC_1_REG.h"
 
 #define DEVICE_ARCHITECTURE_IC_1                  "ADAU1452"
-#define DEVICE_ADDR_IC_1                          0x0
+#define DEVICE_ADDR_IC_1                          0x70
 
 /* DSP Ram Data */
 #define DM1_DATA_SIZE_IC_1 16
