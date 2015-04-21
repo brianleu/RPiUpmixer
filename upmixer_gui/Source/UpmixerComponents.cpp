@@ -352,26 +352,32 @@ void UpmixerComponents::comboBoxChanged (ComboBox* comboBoxThatHasChanged)
             sourceRotationMode = true;
             SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_2XN_1_ALG0_STEREODEMUXSIGMA300NS1VOL0_ADDR, 4, volOff);
             SIGMA_WRITE_REGISTER_BLOCK(DEVICE_ADDR_IC_1, MOD_2XN_1_ALG0_STEREODEMUXSIGMA300NS1VOL1_ADDR, 4, volOn);
-            double gain;
+            double FLgain, FRgain, Cgain, RLgain, RRgain;
             
             // Update the sliders with gain values for the sound source rotation
             // Values are stored in Helicopter.h
-            for (int i = 0; i < 882000; i++)
-            {
-                gain = FL_channel[i];
-                FLslider->setValue(gain);
-                
-                gain = FR_channel[i];
-                FRslider->setValue(gain);
-                
-                gain = C_channel[i];
-                Cslider->setValue(gain);
-                
-                gain = RL_channel[i];
-                RLslider->setValue(gain);
-                
-                gain = RR_channel[i];
-                RRslider->setValue(gain);
+            int i = 0;
+            int j = 0;
+
+            for (j = 0; j < 3; j++){
+                for (i = 0; i < 8820; i++)
+                {
+                    FLgain = FL_channel[i];
+                    FRgain = FR_channel[i];
+                    Cgain = C_channel[i];
+                    RLgain = RL_channel[i];
+                    RRgain = RR_channel[i];
+
+                    FLslider->setValue(FLgain,sendNotificationSync);
+                    FRslider->setValue(FRgain,sendNotificationSync);
+                    Cslider->setValue(Cgain,sendNotificationSync);
+                    RLslider->setValue(RLgain,sendNotificationSync);
+                    RRslider->setValue(RRgain,sendNotificationSync);
+
+                    repaint();
+
+                    usleep(1000);
+                }
             }
         }
     }
@@ -424,15 +430,15 @@ void UpmixerComponents::handleMouse (const MouseEvent& event)
         FRslider->setValue(gain);
         
         // C gain
-        gain = 100 / (sqrt (pow((x - 590), 2) + pow((y - 302), 2)) );
+        gain = 100 / (sqrt (pow((x - 590), 2) + pow((y - 173), 2)) );
         Cslider->setValue(gain);
         
         // RL gain
-        gain = 50 / (sqrt (pow((x - 451), 2) + pow((y - 430), 2)) );
+        gain = 100 / (sqrt (pow((x - 451), 2) + pow((y - 430), 2)) );
         RLslider->setValue(gain);
     
         // RR gain
-        gain = 50 / (sqrt (pow((x - 736), 2) + pow((y - 430), 2)) );
+        gain = 100 / (sqrt (pow((x - 736), 2) + pow((y - 430), 2)) );
         RRslider->setValue(gain);
     }
 }
